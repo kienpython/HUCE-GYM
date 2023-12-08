@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_trang_chu);
+        setContentView(R.layout.activity_login);
         init();
     }
     //Khởi tạo các thành phần
