@@ -1,6 +1,8 @@
-package com.example.hucegym;
+package com.example.hucegym.views;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.hucegym.viewmodel.TrangChuViewModel;
 
 public class TrangChuActivity extends AppCompatActivity {
 

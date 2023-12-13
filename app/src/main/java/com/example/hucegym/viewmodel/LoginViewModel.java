@@ -1,10 +1,14 @@
-package com.example.hucegym;
+package com.example.hucegym.viewmodel;
 
 import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
 import androidx.databinding.BaseObservable;
 import androidx.databinding.Bindable;
+
+import com.example.hucegym.BR;
+import com.example.hucegym.views.MainActivity;
+import com.example.hucegym.views.RegisterActivity;
 
 
 public class LoginViewModel extends BaseObservable {

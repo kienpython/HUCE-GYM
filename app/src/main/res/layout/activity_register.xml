@@ -6,7 +6,7 @@
     <data>
         <variable
             name="RegisterViewModel"
-            type="com.example.hucegym.RegisterViewModel" />
+            type="com.example.hucegym.viewmodel.RegisterViewModel" />
     </data>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"

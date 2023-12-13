@@ -1,4 +1,4 @@
-package com.example.hucegym;
+package com.example.hucegym.viewmodel;
 
 import androidx.lifecycle.ViewModel;
 

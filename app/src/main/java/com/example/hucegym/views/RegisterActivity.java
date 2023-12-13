@@ -1,4 +1,4 @@
-package com.example.hucegym;
+package com.example.hucegym.views;
 
 import android.os.Bundle;
 import android.view.View;
@@ -8,6 +8,9 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
+
+import com.example.hucegym.R;
+import com.example.hucegym.viewmodel.RegisterViewModel;
 
 public class RegisterActivity extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package com.example.hucegym;
+package com.example.hucegym.views;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.text.Html;
 import android.util.Log;
 import android.widget.TextView;
+
+import com.example.hucegym.R;
 
 
 public class MainActivity extends AppCompatActivity {
