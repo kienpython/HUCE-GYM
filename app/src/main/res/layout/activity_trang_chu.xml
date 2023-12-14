@@ -25,45 +25,6 @@
                 android:layout_height="wrap_content">
 
 
-                <ImageButton
-                    android:id="@+id/button4"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginStart="40dp"
-                    android:layout_marginTop="40dp"
-                    android:layout_marginEnd="20dp"
-                    android:text="Button"
-                    app:layout_constraintEnd_toStartOf="@+id/button5"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/button2"
-                    app:srcCompat="?android:attr/actionModeFindDrawable" />
-
-                <Button
-                    android:id="@+id/button3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="60dp"
-                    android:layout_marginEnd="40dp"
-                    android:drawableLeft="@android:drawable/ic_menu_myplaces"
-                    android:text="Theo dõi sức khỏe"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/button2"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/logo" />
-
-                <Button
-                    android:id="@+id/button2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="40dp"
-                    android:layout_marginTop="60dp"
-                    android:drawableLeft="@android:drawable/ic_menu_my_calendar"
-                    android:text="Xem lịch"
-                    app:layout_constraintEnd_toStartOf="@+id/button3"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                     />
-
                 <TextView
                     android:id="@+id/textView"
                     android:layout_width="wrap_content"
@@ -85,173 +46,15 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <ImageButton
-                    android:id="@+id/button6"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="40dp"
-                    android:layout_marginEnd="20dp"
-                    android:text="Button"
-                    app:layout_constraintEnd_toStartOf="@+id/button7"
-                    app:layout_constraintStart_toEndOf="@+id/button5"
-                    app:layout_constraintTop_toBottomOf="@+id/button3"
-                    app:srcCompat="@drawable/event"/>
-
-                <ImageButton
-                    android:id="@+id/button10"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="40dp"
-                    android:layout_marginEnd="20dp"
-                    android:text="Button"
-                    app:layout_constraintEnd_toStartOf="@+id/button11"
-                    app:layout_constraintStart_toEndOf="@+id/button9"
-                    app:layout_constraintTop_toBottomOf="@+id/button6"
-                    app:srcCompat="@drawable/logo"/>
-
-                <ImageButton
                     android:id="@+id/imageButton2"
                     android:layout_width="596dp"
                     android:layout_height="151dp"
-                    android:layout_marginTop="44dp"
+                    android:layout_marginTop="40dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.448"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/button8"
+                    app:layout_constraintTop_toBottomOf="@+id/tableLayout"
                     app:srcCompat="@drawable/logo" />
-
-                <ImageButton
-                    android:id="@+id/btnRules"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="40dp"
-                    android:layout_marginEnd="20dp"
-                    android:text="Button"
-                    app:layout_constraintEnd_toStartOf="@+id/button10"
-                    app:layout_constraintStart_toEndOf="@+id/button8"
-                    app:layout_constraintTop_toBottomOf="@+id/button5"
-                    app:srcCompat="@drawable/logo"
-                    />
-
-                <ImageButton
-                    android:id="@+id/button14"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="40dp"
-                    android:layout_marginEnd="10dp"
-                    android:text="Button"
-                    app:layout_constraintEnd_toStartOf="@+id/button16"
-                    app:layout_constraintStart_toEndOf="@+id/button12"
-                    app:layout_constraintTop_toBottomOf="@+id/imageButton2"
-                    app:srcCompat="@drawable/logo"/>
-
-                <ImageButton
-                    android:id="@+id/button17"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="40dp"
-                    android:layout_marginEnd="10dp"
-                    android:text="Button"
-                    app:layout_constraintEnd_toStartOf="@+id/button18"
-                    app:layout_constraintStart_toEndOf="@+id/button16"
-                    app:layout_constraintTop_toBottomOf="@+id/imageButton2"
-                    app:srcCompat="@drawable/logo"/>
-
-                <ImageButton
-                    android:id="@+id/button8"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginStart="40dp"
-                    android:layout_marginTop="40dp"
-                    android:layout_marginEnd="20dp"
-                    android:text="Button"
-                    app:layout_constraintEnd_toStartOf="@+id/button9"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/button4"
-                    app:srcCompat="@drawable/logo"/>
-
-                <ImageButton
-                    android:id="@+id/button16"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="40dp"
-                    android:layout_marginEnd="10dp"
-                    android:text="Button"
-                    app:layout_constraintEnd_toStartOf="@+id/button17"
-                    app:layout_constraintStart_toEndOf="@+id/button14"
-                    app:layout_constraintTop_toBottomOf="@+id/imageButton2"
-                    app:srcCompat="@drawable/logo"/>
-
-                <ImageButton
-                    android:id="@+id/button12"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginStart="40dp"
-                    android:layout_marginTop="40dp"
-                    android:layout_marginEnd="10dp"
-                    android:text="Button"
-                    app:layout_constraintEnd_toStartOf="@+id/button14"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/imageButton2"
-                    app:srcCompat="@drawable/logo"/>
-
-                <ImageButton
-                    android:id="@+id/button11"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="40dp"
-                    android:layout_marginEnd="40dp"
-                    android:text="Button"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/button10"
-                    app:layout_constraintTop_toBottomOf="@+id/button7"
-                    app:srcCompat="@drawable/logo"/>
-
-                <ImageButton
-                    android:id="@+id/button18"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="40dp"
-                    android:layout_marginEnd="40dp"
-                    android:text="Button"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/button17"
-                    app:layout_constraintTop_toBottomOf="@+id/imageButton2"
-                    app:srcCompat="@drawable/logo"/>
-
-                <ImageButton
-                    android:id="@+id/button5"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="40dp"
-                    android:layout_marginEnd="20dp"
-                    android:text="Button"
-                    app:layout_constraintEnd_toStartOf="@+id/button6"
-                    app:layout_constraintStart_toEndOf="@+id/button4"
-                    app:layout_constraintTop_toBottomOf="@+id/button2"
-                    app:srcCompat="@drawable/event"/>
-
-                <ImageButton
-                    android:id="@+id/button7"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="40dp"
-                    android:layout_marginEnd="40dp"
-                    android:text="Button"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/button6"
-                    app:layout_constraintTop_toBottomOf="@+id/button3"
-                    app:srcCompat="@drawable/logo"/>
 
                 <ImageButton
                     android:id="@+id/imageButton3"
@@ -263,161 +66,262 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@android:drawable/ic_popup_reminder" />
 
-                <TextView
-                    android:id="@+id/textView11"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginStart="40dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="20dp"
-                    android:text=" Xem bài tập"
-                    app:layout_constraintEnd_toStartOf="@+id/textView12"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/button4" />
-
-                <TextView
-                    android:id="@+id/textView12"
-                    android:layout_width="wrap_content"
+                <TableLayout
+                    android:id="@+id/tableLayout"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="20dp"
                     android:layout_marginEnd="20dp"
-                    android:text="Sự kiện"
-                    app:layout_constraintEnd_toStartOf="@+id/textView13"
-                    app:layout_constraintStart_toEndOf="@+id/textView11"
-                    app:layout_constraintTop_toBottomOf="@+id/button5" />
-
-                <TextView
-                    android:id="@+id/textView13"
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="20dp"
-                    android:text="Gói tập"
-                    app:layout_constraintEnd_toStartOf="@+id/textView14"
-                    app:layout_constraintStart_toEndOf="@+id/textView12"
-                    app:layout_constraintTop_toBottomOf="@+id/button6" />
-
-                <TextView
-                    android:id="@+id/textView14"
-                    android:layout_width="20dp"
-                    android:layout_height="50dp"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="40dp"
-                    android:text="PT"
+                    android:stretchColumns="*"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/textView13"
-                    app:layout_constraintTop_toBottomOf="@+id/button7" />
-
-                <TextView
-                    android:id="@+id/textView19"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="40dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="20dp"
-                    android:text="Lớp"
-                    app:layout_constraintEnd_toStartOf="@+id/textView20"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/button8" />
+                    app:layout_constraintTop_toBottomOf="@+id/tableLayout2">
 
-                <TextView
-                    android:id="@+id/textView20"
-                    android:layout_width="wrap_content"
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageButton
+                            android:id="@+id/imageButton8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@android:drawable/btn_star" />
+
+                        <ImageButton
+                            android:id="@+id/imageButton9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@android:drawable/btn_star" />
+
+                        <ImageButton
+                            android:id="@+id/imageButton15"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@android:drawable/btn_star" />
+
+                        <ImageButton
+                            android:id="@+id/imageButton16"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@android:drawable/btn_star" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/textView11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Xem bài tập"
+                            android:textAlignment="center" />
+
+                        <TextView
+                            android:id="@+id/textView12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Sự kiện"
+                            android:textAlignment="center" />
+
+                        <TextView
+                            android:id="@+id/textView13"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Gói tập"
+                            android:textAlignment="center" />
+
+                        <TextView
+                            android:id="@+id/textView14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="PT"
+                            android:textAlignment="center" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageButton
+                            android:id="@+id/imageButton4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@android:drawable/btn_star" />
+
+                        <ImageButton
+                            android:id="@+id/ibtnDieuKhoan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@android:drawable/btn_star" />
+
+                        <ImageButton
+                            android:id="@+id/ibtnNhacNho"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@android:drawable/btn_star" />
+
+                        <ImageButton
+                            android:id="@+id/ibtnGopY"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@android:drawable/btn_star" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/textView18"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Lớp"
+                            android:textAlignment="center" />
+
+                        <TextView
+                            android:id="@+id/textView19"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Điều khoản"
+                            android:textAlignment="center" />
+
+                        <TextView
+                            android:id="@+id/textView21"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Nhắc nhở"
+                            android:textAlignment="center" />
+
+                        <TextView
+                            android:id="@+id/textView22"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Góp ý"
+                            android:textAlignment="center" />
+                    </TableRow>
+                </TableLayout>
+
+                <TableLayout
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="40dp"
                     android:layout_marginEnd="20dp"
-                    android:text="Điều khoản"
-                    app:layout_constraintEnd_toStartOf="@+id/textView21"
-                    app:layout_constraintStart_toEndOf="@+id/textView19"
-                    app:layout_constraintTop_toBottomOf="@+id/button9" />
-
-                <TextView
-                    android:id="@+id/textView21"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="20dp"
-                    android:text="Nhắc nhở"
-                    app:layout_constraintEnd_toStartOf="@+id/textView22"
-                    app:layout_constraintStart_toEndOf="@+id/textView20"
-                    app:layout_constraintTop_toBottomOf="@+id/button10" />
-
-                <TextView
-                    android:id="@+id/textView22"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="40dp"
-                    android:text="Góp ý"
+                    android:stretchColumns="*"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/textView21"
-                    app:layout_constraintTop_toBottomOf="@+id/button11" />
-
-                <TextView
-                    android:id="@+id/textView23"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginStart="40dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="10dp"
-                    android:text="Trang chủ"
-                    app:layout_constraintEnd_toStartOf="@+id/textView24"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/button12" />
+                    app:layout_constraintTop_toBottomOf="@+id/imageButton2">
 
-                <TextView
-                    android:id="@+id/textView24"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="10dp"
-                    android:text="Xem lịch"
-                    app:layout_constraintEnd_toStartOf="@+id/textView25"
-                    app:layout_constraintStart_toEndOf="@+id/textView23"
-                    app:layout_constraintTop_toBottomOf="@+id/button14" />
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
 
-                <TextView
-                    android:id="@+id/textView25"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="10dp"
-                    android:text="QC"
-                    app:layout_constraintEnd_toStartOf="@+id/textView27"
-                    app:layout_constraintStart_toEndOf="@+id/textView24"
-                    app:layout_constraintTop_toBottomOf="@+id/button16" />
+                        <ImageButton
+                            android:id="@+id/imageButton17"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@android:drawable/btn_star" />
 
-                <TextView
-                    android:id="@+id/textView26"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="40dp"
-                    android:text="Cá nhân"
+                        <ImageButton
+                            android:id="@+id/imageButton18"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@android:drawable/btn_star" />
+
+                        <ImageButton
+                            android:id="@+id/imageButton19"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@android:drawable/btn_star" />
+
+                        <ImageButton
+                            android:id="@+id/imageButton20"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@android:drawable/btn_star" />
+
+                        <ImageButton
+                            android:id="@+id/imageButton21"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@android:drawable/btn_star" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/textView23"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Trang chủ"
+                            android:textAlignment="center" />
+
+                        <TextView
+                            android:id="@+id/textView24"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Xem lịch"
+                            android:textAlignment="center" />
+
+                        <TextView
+                            android:id="@+id/textView25"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/textView26"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Góp ý"
+                            android:textAlignment="center" />
+
+                        <TextView
+                            android:id="@+id/textView27"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Cá Nhân"
+                            android:textAlignment="center" />
+                    </TableRow>
+
+                </TableLayout>
+
+                <TableLayout
+                    android:id="@+id/tableLayout2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:stretchColumns="*"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/textView27"
-                    app:layout_constraintTop_toBottomOf="@+id/button18" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageButton3">
 
-                <TextView
-                    android:id="@+id/textView27"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="10dp"
-                    android:text="Góp ý"
-                    app:layout_constraintEnd_toStartOf="@+id/textView26"
-                    app:layout_constraintStart_toEndOf="@+id/textView25"
-                    app:layout_constraintTop_toBottomOf="@+id/button17" />
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <Button
+                            android:id="@+id/button2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@android:drawable/ic_menu_my_calendar"
+                            android:text="Xem lịch" />
+
+                        <Button
+                            android:id="@+id/button3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@android:drawable/ic_menu_myplaces"
+                            android:text="sức khỏe" />
+
+                    </TableRow>
+
+                </TableLayout>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </ScrollView>

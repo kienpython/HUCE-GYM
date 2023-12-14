@@ -12,20 +12,22 @@ import com.example.hucegym.R;
 public class TrangChuActivity extends AppCompatActivity {
 
     private TrangChuViewModel viewModel;
-    private ImageButton btnRules;
+    private ImageButton ibtnRules;
+    private ImageButton ibtnFeedBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_trang_chu);
-        btnRules = findViewById(R.id.btnRules);
-        // Bắt sự kiện khi điều khoản được click
-        btnRules.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startRulesActivity();
-            }
-        });
+        feedBack();
+//        ibtnRules = findViewById(R.id.ibtnDieuKhoan);
+//        // Bắt sự kiện khi điều khoản được click
+//        ibtnRules.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startRulesActivity();
+//            }
+//        });
 
 //
 //        viewModel = new TrangChuViewModel();
@@ -73,4 +75,19 @@ public class TrangChuActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    // Chuyển sang phần góp ý
+    private void startFeedBackActivity() {
+        Intent intent = new Intent(TrangChuActivity.this, FeedbackActivity.class);
+        startActivity(intent);
+    }
+    // Xử lý sự kiện nút góp ý
+    private void feedBack(){
+        ibtnFeedBack = findViewById(R.id.ibtnGopY);
+        ibtnFeedBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startFeedBackActivity();
+            }
+        });
+    }
 }
