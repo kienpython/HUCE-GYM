@@ -1,17 +1,32 @@
 package com.example.hucegym.views;
 
+import android.content.Intent;
+import android.view.View;
+import android.widget.ImageButton;
+import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.hucegym.viewmodel.TrangChuViewModel;
+import com.example.hucegym.R;
 
 public class TrangChuActivity extends AppCompatActivity {
 
     private TrangChuViewModel viewModel;
-//
-//    @Override
-//    protected void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_trang_chu);
+    private ImageButton btnRules;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_trang_chu);
+        btnRules = findViewById(R.id.btnRules);
+        // Bắt sự kiện khi điều khoản được click
+        btnRules.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startRulesActivity();
+            }
+        });
+
 //
 //        viewModel = new TrangChuViewModel();
 //
@@ -50,5 +65,12 @@ public class TrangChuActivity extends AppCompatActivity {
 //        });
 //
 //        //Thêm sự kiện cho các ImageButton và TextView khác
-//    }
+    }
+
+    // Chuyển trang sang phần điều khoản
+    private void startRulesActivity() {
+        Intent intent = new Intent(TrangChuActivity.this, RulesActivity.class);
+        startActivity(intent);
+    }
+
 }
