@@ -5,7 +5,7 @@
 
     <data>
         <variable
-            name="LoginViewModel"
+            name="loginViewModel"
             type="com.example.hucegym.viewmodel.LoginViewModel" />
     </data>
 
@@ -53,6 +53,7 @@
                     android:layout_marginTop="28dp"
                     android:layout_marginEnd="16dp"
                     android:text="Đăng ký"
+                    android:onClick="@{() -> loginViewModel.navigateToRegister()}"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/edPassword" />
 
@@ -63,6 +64,7 @@
                     android:layout_marginStart="20dp"
                     android:layout_marginTop="28dp"
                     android:text="Đăng nhập"
+                    android:onClick="@{() -> loginViewModel.loginUser()}"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/edPassword" />
 
