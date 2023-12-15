@@ -15,6 +15,9 @@
         android:theme="@style/Theme.HUCEGYM"
         tools:targetApi="31">
         <activity
+            android:name=".CheckCalendarActivity"
+            android:exported="false" />
+        <activity
             android:name=".views.FeedbackActivity"
             android:exported="false" />
         <activity
