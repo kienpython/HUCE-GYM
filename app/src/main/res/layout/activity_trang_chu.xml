@@ -85,7 +85,7 @@
                         android:layout_height="match_parent">
 
                         <ImageButton
-                            android:id="@+id/imageButton8"
+                            android:id="@+id/imgExercises"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:src="@android:drawable/btn_star" />
@@ -310,14 +310,14 @@
                         android:layout_height="match_parent">
 
                         <Button
-                            android:id="@+id/button2"
+                            android:id="@+id/btnCheckCalendar"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:drawableLeft="@android:drawable/ic_menu_my_calendar"
                             android:text="Xem lịch" />
 
                         <Button
-                            android:id="@+id/button3"
+                            android:id="@+id/btnHealthMonitoring"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:drawableLeft="@android:drawable/ic_menu_myplaces"
