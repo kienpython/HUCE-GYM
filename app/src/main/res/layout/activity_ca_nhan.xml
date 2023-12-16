@@ -12,18 +12,122 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <View
+            android:id="@+id/view1"
+            android:layout_width="350dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="55dp"
+            android:layout_marginEnd="25dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewHoTenHV" />
+
+
+        <View
+            android:layout_width="350dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="45dp"
+            android:layout_marginEnd="25dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewIDHV" />
+
+        <View
+            android:id="@+id/view3"
+            android:layout_width="350dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="45dp"
+            android:layout_marginEnd="25dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewNgaySinhHV" />
+
+        <View
+            android:id="@+id/view4"
+            android:layout_width="350dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="45dp"
+            android:layout_marginEnd="25dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewGioiTinhHV" />
+
+        <View
+            android:id="@+id/view5"
+            android:layout_width="350dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="45dp"
+            android:layout_marginEnd="25dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTuoiHV" />
+
+        <View
+            android:id="@+id/view6"
+            android:layout_width="350dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="45dp"
+            android:layout_marginEnd="25dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewSĐTHV" />
+
+        <View
+            android:id="@+id/view7"
+            android:layout_width="350dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="45dp"
+            android:layout_marginEnd="25dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewEmailHV" />
+
+        <View
+            android:id="@+id/view8"
+            android:layout_width="350dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="45dp"
+            android:layout_marginEnd="25dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewCMNDHV" />
+
         <TextView
-            android:id="@+id/textViewCMND"
+            android:id="@+id/textViewCMNDHV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="190dp"
             android:layout_marginTop="20dp"
             android:text="TextView"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewEmail" />
+            app:layout_constraintTop_toBottomOf="@+id/textViewEmailHV" />
 
         <TextView
-            android:id="@+id/textViewNgaySinh"
+            android:id="@+id/textViewNgaySinhHV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="190dp"
@@ -33,14 +137,14 @@
             app:layout_constraintTop_toBottomOf="@+id/textViewIDHV" />
 
         <TextView
-            android:id="@+id/textViewEmail"
+            android:id="@+id/textViewEmailHV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="190dp"
             android:layout_marginTop="20dp"
             android:text="TextView"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewSĐT" />
+            app:layout_constraintTop_toBottomOf="@+id/textViewSĐTHV" />
 
         <TextView
             android:id="@+id/textViewIDHV"
@@ -50,47 +154,47 @@
             android:layout_marginTop="30dp"
             android:text="TextView"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewhoten" />
+            app:layout_constraintTop_toBottomOf="@+id/textViewHoTenHV" />
 
         <TextView
-            android:id="@+id/textViewGioiTinh"
+            android:id="@+id/textViewGioiTinhHV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="190dp"
             android:layout_marginTop="20dp"
             android:text="TextView"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewNgaySinh" />
+            app:layout_constraintTop_toBottomOf="@+id/textViewNgaySinhHV" />
 
         <TextView
-            android:id="@+id/textViewTuoi"
+            android:id="@+id/textViewTuoiHV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="190dp"
             android:layout_marginTop="20dp"
             android:text="TextView"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewGioiTinh" />
+            app:layout_constraintTop_toBottomOf="@+id/textViewGioiTinhHV" />
 
         <TextView
-            android:id="@+id/textViewSĐT"
+            android:id="@+id/textViewSĐTHV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="190dp"
             android:layout_marginTop="20dp"
             android:text="TextView"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewTuoi" />
+            app:layout_constraintTop_toBottomOf="@+id/textViewTuoiHV" />
 
         <TextView
-            android:id="@+id/textViewBienxe"
+            android:id="@+id/textViewBienxeHV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="190dp"
             android:layout_marginTop="20dp"
             android:text="TextView"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewCMND" />
+            app:layout_constraintTop_toBottomOf="@+id/textViewCMNDHV" />
 
     <TextView
         android:id="@+id/tvTitle"
@@ -126,11 +230,12 @@
         app:layout_constraintEnd_toEndOf="@id/imgAvatar" />
 
     <TextView
-        android:id="@+id/textViewhoten"
+        android:id="@+id/textViewHoTenHV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="Họ và tên"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgAvatar" />
@@ -141,6 +246,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="52dp"
             android:layout_marginTop="20dp"
+            android:textStyle="bold"
             android:text="Ngày Sinh"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textViewIDHV" />
@@ -157,37 +263,40 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewBienxe" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewBienxeHV" />
 
     <TextView
         android:id="@+id/textViewTuoi1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="52dp"
+        android:textStyle="bold"
         android:layout_marginTop="20dp"
         android:text="Tuổi"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewGioiTinh" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewGioiTinhHV" />
 
     <TextView
         android:id="@+id/textViewGioiTinh1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="52dp"
+        android:textStyle="bold"
         android:layout_marginTop="20dp"
         android:text="Giới Tính"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewNgaySinh" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewNgaySinhHV" />
 
     <TextView
         android:id="@+id/textViewSĐT1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="52dp"
+        android:textStyle="bold"
         android:layout_marginTop="20dp"
         android:text="Số Điện Thoại"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTuoi" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewTuoiHV" />
 
     <TextView
         android:id="@+id/textViewEmail1"
@@ -195,9 +304,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="52dp"
         android:layout_marginTop="20dp"
+        android:textStyle="bold"
         android:text="Email"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewSĐT" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewSĐTHV" />
 
     <TextView
         android:id="@+id/textViewCMND1"
@@ -205,9 +315,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="52dp"
         android:layout_marginTop="20dp"
+        android:textStyle="bold"
         android:text="CMND"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewEmailHV" />
 
     <TextView
         android:id="@+id/textViewIDHV1"
@@ -215,19 +326,21 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="52dp"
         android:layout_marginTop="30dp"
+        android:textStyle="bold"
         android:text="ID Hội viên"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewhoten" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewHoTenHV" />
 
         <TextView
             android:id="@+id/textViewBienxe1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="52dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"
             android:text="Biển số xe"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewCMND" />
+            app:layout_constraintTop_toBottomOf="@+id/textViewCMNDHV" />
 
         <TableLayout
             android:layout_width="0dp"
@@ -295,6 +408,8 @@
 
                 <TextView
                     android:id="@+id/textView25"
+                    android:text="QR"
+                    android:textAlignment="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
 

@@ -7,185 +7,210 @@
     android:layout_height="wrap_content"
     android:padding="16dp">
 
-    <ImageView
-        android:id="@+id/imageAvatar"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_constraintBottom_toBottomOf="parent"
-        android:layout_constraintStart_toStartOf="parent"
-        android:layout_constraintTop_toTopOf="parent"
-        android:layout_marginStart="154dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="154dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/logo"
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:background="#0033FF"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/textViewMaNV"
-        android:layout_width="110dp"
-        android:layout_height="30dp"
-        android:layout_constraintStart_toEndOf="@id/imageAvatar"
-        android:layout_constraintEnd_toEndOf="parent"
-        android:layout_constraintTop_toTopOf="@id/imageAvatar"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="40dp"
-        android:text="Mã Nhân Viên:"
-        android:textStyle="bold"
-        android:textColor="@android:color/black"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageAvatar" />
+        <ImageButton
+            android:id="@+id/ibtnBackPT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="?attr/homeAsUpIndicator" />
 
-    <TextView
-        android:id="@+id/textViewTenNV"
-        android:layout_width="110dp"
-        android:layout_height="30dp"
-        android:layout_constraintTop_toBottomOf="@id/textViewMaNV"
-        android:layout_constraintStart_toEndOf="@id/imageAvatar"
-        android:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="10dp"
-        android:text="Tên: "
-        android:textColor="@android:color/black"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewMaNV" />
+        <TextView
+            android:id="@+id/textView204"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:paddingLeft="10dp"
+            android:text="Thông tin Personal Tranning" />
+    </LinearLayout>
 
-    <TextView
-        android:id="@+id/textViewGioiTinhNV"
-        android:layout_width="110dp"
-        android:layout_height="30dp"
-        android:layout_constraintTop_toBottomOf="@id/textViewMaNV"
-        android:layout_constraintStart_toEndOf="@id/imageAvatar"
-        android:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="10dp"
-        android:text="Giới Tính: "
-        android:textColor="@android:color/black"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTenNV" />
-
-
-    <TextView
-        android:id="@+id/textViewTuoiNV"
-        android:layout_width="110dp"
-        android:layout_height="30dp"
-        android:layout_constraintTop_toBottomOf="@id/textViewTenNV"
-        android:layout_constraintStart_toEndOf="@id/imageAvatar"
-        android:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="10dp"
-        android:text="Tuổi:"
-        android:textColor="@android:color/black"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewGioiTinhNV" />
-
-    <TextView
-        android:id="@+id/textViewSĐTNV"
-        android:layout_width="110dp"
-        android:layout_height="30dp"
-        android:layout_constraintTop_toBottomOf="@id/textViewTenNV"
-        android:layout_constraintStart_toEndOf="@id/imageAvatar"
-        android:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="10dp"
-        android:text="SĐT:"
-        android:textColor="@android:color/black"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTuoiNV" />
-
-    <TextView
-        android:id="@+id/textViewGmailNV"
-        android:layout_width="110dp"
-        android:layout_height="30dp"
-        android:layout_constraintTop_toBottomOf="@id/textViewTenNV"
-        android:layout_constraintStart_toEndOf="@id/imageAvatar"
-        android:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="10dp"
-        android:text="Gmail:"
-        android:textColor="@android:color/black"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewSĐTNV" />
-
-    <TextView
-        android:id="@+id/textMaNV"
-        android:layout_width="180dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="40dp"
-        android:text="TextView"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="371dp"
+        android:layout_height="465dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="90dp"
+        android:layout_marginEnd="5dp"
+        android:padding="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textViewMaNV"
-        app:layout_constraintTop_toBottomOf="@+id/imageAvatar" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/textTenNV"
-        android:layout_width="180dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="10dp"
-        android:text="TextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textViewTenNV"
-        app:layout_constraintTop_toBottomOf="@+id/textMaNV" />
+        <ImageView
+            android:id="@+id/imageAvatarPT"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_constraintBottom_toBottomOf="parent"
+            android:layout_constraintStart_toStartOf="parent"
+            android:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="154dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="154dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textGioiTinhNV"
-        android:layout_width="180dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="10dp"
-        android:text="TextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textViewGioiTinhNV"
-        app:layout_constraintTop_toBottomOf="@+id/textTenNV" />
+        <TextView
+            android:id="@+id/textViewMaNV"
+            android:layout_width="110dp"
+            android:layout_height="30dp"
+            android:layout_constraintStart_toEndOf="@id/imageAvatarPT"
+            android:layout_constraintEnd_toEndOf="parent"
+            android:layout_constraintTop_toTopOf="@id/imageAvatarPT"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="40dp"
+            android:text="Mã Nhân Viên:"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageAvatarPT" />
 
-    <TextView
-        android:id="@+id/textTuoiNV"
-        android:layout_width="180dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="10dp"
-        android:text="TextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textViewTuoiNV"
-        app:layout_constraintTop_toBottomOf="@+id/textGioiTinhNV" />
+        <TextView
+            android:id="@+id/textViewTenNV"
+            android:layout_width="110dp"
+            android:layout_height="30dp"
+            android:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:text="Tên: "
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewMaNV" />
 
-    <TextView
-        android:id="@+id/textSĐTNV"
-        android:layout_width="180dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="10dp"
-        android:text="TextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textViewTuoiNV"
-        app:layout_constraintTop_toBottomOf="@+id/textTuoiNV" />
+        <TextView
+            android:id="@+id/textViewGioiTinhNV"
+            android:layout_width="110dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:text="Giới Tính: "
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTenNV" />
 
-    <TextView
-        android:id="@+id/textGamilNV"
-        android:layout_width="180dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="10dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textViewTuoiNV"
-        app:layout_constraintTop_toBottomOf="@+id/textSĐTNV" />
+
+        <TextView
+            android:id="@+id/textViewTuoiNV"
+            android:layout_width="110dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:text="Tuổi:"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewGioiTinhNV" />
+
+        <TextView
+            android:id="@+id/textViewSĐTNV"
+            android:layout_width="110dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:text="SĐT:"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTuoiNV" />
+
+        <TextView
+            android:id="@+id/textViewGmailNV"
+            android:layout_width="110dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:text="Gmail:"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewSĐTNV" />
+
+        <TextView
+            android:id="@+id/textMaNV"
+            android:layout_width="180dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="40dp"
+            android:text="TextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textViewMaNV"
+            app:layout_constraintTop_toBottomOf="@+id/imageAvatarPT" />
+
+        <TextView
+            android:id="@+id/textTenNV"
+            android:layout_width="180dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:text="TextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textViewTenNV"
+            app:layout_constraintTop_toBottomOf="@+id/textMaNV" />
+
+        <TextView
+            android:id="@+id/textGioiTinhNV"
+            android:layout_width="180dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:text="TextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textViewGioiTinhNV"
+            app:layout_constraintTop_toBottomOf="@+id/textTenNV" />
+
+        <TextView
+            android:id="@+id/textTuoiNV"
+            android:layout_width="180dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:text="TextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textViewTuoiNV"
+            app:layout_constraintTop_toBottomOf="@+id/textGioiTinhNV" />
+
+        <TextView
+            android:id="@+id/textSĐTNV"
+            android:layout_width="180dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:text="TextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textViewTuoiNV"
+            app:layout_constraintTop_toBottomOf="@+id/textTuoiNV" />
+
+        <TextView
+            android:id="@+id/textGamilNV"
+            android:layout_width="180dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:text="TextView"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textViewTuoiNV"
+            app:layout_constraintTop_toBottomOf="@+id/textSĐTNV" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
