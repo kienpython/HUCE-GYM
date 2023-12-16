@@ -5,8 +5,8 @@
 
     <data>
         <variable
-            name="NhacNho"
-            type="com.example.hucegym.viewmodel.NhacNhoViewModel" />
+            name="LopViewModel"
+            type="com.example.hucegym.viewmodel.LopViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -16,13 +16,9 @@
         android:padding="10dp">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerView"
+            android:id="@+id/recyclerViewLop"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
-<!--            app:items="@{NhacNho.listNhacNho}"-->
-<!--            app:nhacNhoClickListener="@{NhacNho::onNhacNhoClick}"/> -->
-
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

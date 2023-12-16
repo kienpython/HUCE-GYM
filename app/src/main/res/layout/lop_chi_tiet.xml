@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/txt_id_lop2"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="ID Lớp:"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_id_lop"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="10dp"
+        android:text="123456"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_id_nv2"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="10dp"
+        android:text="ID Nhân Viên:"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_id_lop2" />
+
+    <TextView
+        android:id="@+id/txt_types_room2"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="10dp"
+        android:text="Loại Lớp:"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_id_nv2" />
+
+    <TextView
+        android:id="@+id/txt_ten_lop2"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="10dp"
+        android:text="Tên Lớp:"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_types_room2" />
+
+    <TextView
+        android:id="@+id/txt_packages2"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="10dp"
+        android:text="Gói:"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_ten_lop2" />
+
+    <TextView
+        android:id="@+id/txt_thoi_luong2"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="10dp"
+        android:text="Thời lượng:"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_packages2" />
+
+    <TextView
+        android:id="@+id/txt_ngay_hoat_dong2"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="10dp"
+        android:text="Lịch học:"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_thoi_luong2" />
+
+    <TextView
+        android:id="@+id/txt_so_luong_hv2"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="10dp"
+        android:text="Sĩ số lớp:"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_ngay_hoat_dong2" />
+
+    <TextView
+        android:id="@+id/txt_time_start2"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="10dp"
+        android:text="Ngày bắt đầu:"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="104dp"
+        app:layout_constraintTop_toBottomOf="@+id/txt_so_luong_hv2"
+        app:layout_constraintVertical_bias="1.0"/>
+
+    <TextView
+        android:id="@+id/txt_time_end2"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="1dp"
+        android:text="Ngày kết thúc:"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_time_start2"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/txt_id_nv"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="150dp"
+        android:text="545454"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_id_lop" />
+
+    <TextView
+        android:id="@+id/txt_types_room"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="150dp"
+        android:text="Yoga"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_id_nv" />
+
+    <TextView
+        android:id="@+id/txt_ten_lop"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="150dp"
+        android:text="Yoga Sông Quê"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_types_room" />
+
+    <TextView
+        android:id="@+id/txt_packages"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="150dp"
+        android:text="basic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_ten_lop" />
+
+    <TextView
+        android:id="@+id/txt_thoi_luong"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="150dp"
+        android:text="2 tháng"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_packages" />
+
+    <TextView
+        android:id="@+id/txt_ngay_hoat_dong"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="150dp"
+        android:text="T2, T3, T4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_thoi_luong" />
+
+    <TextView
+        android:id="@+id/txt_so_luong_hv"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="150dp"
+        android:text="40"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_ngay_hoat_dong" />
+
+    <TextView
+        android:id="@+id/txt_time_start"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="150dp"
+        android:text="01/01/2023"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="104dp"
+        app:layout_constraintTop_toBottomOf="@+id/txt_so_luong_hv"
+        app:layout_constraintVertical_bias="1.0"/>
+
+    <TextView
+        android:id="@+id/txt_time_end"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="1dp"
+        android:text="01/03/2023"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_time_start"
+        app:layout_constraintVertical_bias="1.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
