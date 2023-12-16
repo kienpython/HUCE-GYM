@@ -87,26 +87,26 @@
                         <ImageButton
                             android:id="@+id/imgExercises"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@android:drawable/btn_star" />
+                            android:layout_height="68dp"
+                            android:src="@drawable/baitap" />
 
                         <ImageButton
-                            android:id="@+id/imageButton9"
+                            android:id="@+id/imageButton90"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@android:drawable/btn_star" />
+                            android:layout_height="match_parent"
+                            android:src="@drawable/event" />
 
                         <ImageButton
                             android:id="@+id/imageButton15"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@android:drawable/btn_star" />
+                            android:layout_height="match_parent"
+                            android:src="@drawable/goitap" />
 
                         <ImageButton
                             android:id="@+id/imageButton16"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@android:drawable/btn_star" />
+                            android:layout_height="match_parent"
+                            android:src="@drawable/pt"/>
                     </TableRow>
 
                     <TableRow
@@ -149,26 +149,28 @@
                         <ImageButton
                             android:id="@+id/imageButton4"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@android:drawable/btn_star" />
+                            android:layout_height="64dp"
+                            android:src="@drawable/lop" />
 
                         <ImageButton
                             android:id="@+id/ibtnDieuKhoan"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@android:drawable/btn_star" />
+                            android:layout_height="match_parent"
+                            android:src="@drawable/dieukhoan" />
 
                         <ImageButton
                             android:id="@+id/ibtnNhacNho"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@android:drawable/btn_star" />
+                            android:layout_height="match_parent"
+                            android:rotation="-17"
+                            android:rotationX="8"
+                            android:src="@drawable/nhacnho" />
 
                         <ImageButton
                             android:id="@+id/ibtnGopY"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@android:drawable/btn_star" />
+                            android:layout_height="match_parent"
+                            android:src="@drawable/gopy" />
                     </TableRow>
 
                     <TableRow
@@ -221,34 +223,39 @@
                         android:layout_height="match_parent">
 
                         <ImageButton
-                            android:id="@+id/imageButton17"
+                            android:id="@+id/imageButtonTrangChu"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="61dp"
+                            android:background="@android:color/transparent"
                             android:src="@android:drawable/btn_star" />
 
                         <ImageButton
-                            android:id="@+id/imageButton18"
+                            android:id="@+id/imageButtonLich"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@android:drawable/btn_star" />
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            android:src="@drawable/lich" />
 
                         <ImageButton
-                            android:id="@+id/imageButton19"
+                            android:id="@+id/imageButtonQR"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@android:drawable/btn_star" />
+                            android:background="@android:color/transparent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/qr" />
 
                         <ImageButton
-                            android:id="@+id/imageButton20"
+                            android:id="@+id/imageButtonGopY"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@android:drawable/btn_star" />
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            android:src="@drawable/gopy" />
 
                         <ImageButton
-                            android:id="@+id/imageButton21"
+                            android:id="@+id/imageButtonCaNhan"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@android:drawable/btn_star" />
+                            android:background="@android:color/transparent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/canhan" />
                     </TableRow>
 
                     <TableRow

@@ -11,7 +11,7 @@
         android:id="@+id/linearLayoutClass"
         android:layout_width="0dp"
         android:layout_height="60dp"
-        android:background="#0033FF"
+        android:background="@drawable/draw"
         android:gravity="center_vertical"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -22,7 +22,9 @@
             android:id="@+id/ibtnBackClass"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:srcCompat="?attr/homeAsUpIndicator" />
+            android:layout_marginLeft="10dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/back" />
 
         <TextView
             android:id="@+id/textView205"
@@ -30,7 +32,7 @@
             android:layout_height="wrap_content"
             android:textStyle="bold"
             android:textSize="20dp"
-            android:paddingLeft="10dp"
+            android:layout_marginLeft="15dp"
             android:text="Chi tiết lớp học" />
     </LinearLayout>
 

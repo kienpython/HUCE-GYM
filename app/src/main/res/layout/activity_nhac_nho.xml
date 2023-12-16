@@ -19,7 +19,7 @@
             android:id="@+id/linearLayoutNhacNho"
             android:layout_width="0dp"
             android:layout_height="60dp"
-            android:background="#0033FF"
+            android:background="@drawable/draw"
             android:gravity="center_vertical"
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
@@ -28,9 +28,11 @@
 
             <ImageButton
                 android:id="@+id/ibtnBackNhacNho"
+                android:paddingLeft="10dp"
                 android:layout_width="wrap_content"
+                android:background="@android:color/transparent"
                 android:layout_height="wrap_content"
-                app:srcCompat="?attr/homeAsUpIndicator" />
+                android:src="@drawable/back" />
 
             <TextView
                 android:id="@+id/textView206"
