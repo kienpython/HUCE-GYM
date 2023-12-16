@@ -15,7 +15,13 @@
         android:theme="@style/Theme.HUCEGYM"
         tools:targetApi="31">
         <activity
-            android:name=".CheckCalendarActivity"
+            android:name=".views.ExercisesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".views.HealthMonitoring"
+            android:exported="false" />
+        <activity
+            android:name=".views.CheckCalendarActivity"
             android:exported="false" />
         <activity
             android:name=".views.FeedbackActivity"

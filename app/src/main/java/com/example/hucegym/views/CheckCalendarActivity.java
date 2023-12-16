@@ -1,8 +1,10 @@
-package com.example.hucegym;
+package com.example.hucegym.views;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.hucegym.R;
 
 public class CheckCalendarActivity extends AppCompatActivity {
 
@@ -11,4 +13,6 @@ public class CheckCalendarActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_check_calendar);
     }
+
+
 }
