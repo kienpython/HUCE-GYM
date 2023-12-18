@@ -52,8 +52,8 @@
                     android:layout_width="596dp"
                     android:layout_height="151dp"
                     android:layout_marginTop="60dp"
+                    android:background="@android:color/transparent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.448"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tableLayout"
                     app:srcCompat="@drawable/logo" />
@@ -88,25 +88,29 @@
                             android:id="@+id/imgExercises"
                             android:layout_width="wrap_content"
                             android:layout_height="68dp"
+                            android:background="@android:color/transparent"
                             android:src="@drawable/baitap" />
 
                         <ImageButton
                             android:id="@+id/imageButton90"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
                             android:src="@drawable/event" />
 
                         <ImageButton
                             android:id="@+id/imageButton15"
-                            android:layout_width="wrap_content"
+                            android:layout_width="52dp"
                             android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
                             android:src="@drawable/goitap" />
 
                         <ImageButton
                             android:id="@+id/imageButton16"
-                            android:layout_width="wrap_content"
+                            android:layout_width="61dp"
                             android:layout_height="match_parent"
-                            android:src="@drawable/pt"/>
+                            android:background="@android:color/transparent"
+                            android:src="@drawable/pt" />
                     </TableRow>
 
                     <TableRow
@@ -144,18 +148,21 @@
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="20dp">
 
                         <ImageButton
                             android:id="@+id/imageButton4"
                             android:layout_width="wrap_content"
                             android:layout_height="64dp"
+                            android:background="@android:color/transparent"
                             android:src="@drawable/lop" />
 
                         <ImageButton
                             android:id="@+id/ibtnDieuKhoan"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
                             android:src="@drawable/dieukhoan" />
 
                         <ImageButton
@@ -164,12 +171,14 @@
                             android:layout_height="match_parent"
                             android:rotation="-17"
                             android:rotationX="8"
+                            android:background="@android:color/transparent"
                             android:src="@drawable/nhacnho" />
 
                         <ImageButton
                             android:id="@+id/ibtnGopY"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
                             android:src="@drawable/gopy" />
                     </TableRow>
 
@@ -208,10 +217,11 @@
                 </TableLayout>
 
                 <TableLayout
+                    android:id="@+id/tableLayout5"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
-                    android:layout_marginTop="100dp"
+                    android:layout_marginTop="70dp"
                     android:layout_marginEnd="20dp"
                     android:stretchColumns="*"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -231,21 +241,21 @@
 
                         <ImageButton
                             android:id="@+id/imageButtonLich"
-                            android:layout_width="wrap_content"
+                            android:layout_width="54dp"
                             android:layout_height="match_parent"
                             android:background="@android:color/transparent"
                             android:src="@drawable/lich" />
 
                         <ImageButton
                             android:id="@+id/imageButtonQR"
-                            android:layout_width="wrap_content"
-                            android:background="@android:color/transparent"
+                            android:layout_width="56dp"
                             android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
                             android:src="@drawable/qr" />
 
                         <ImageButton
                             android:id="@+id/imageButtonGopY"
-                            android:layout_width="wrap_content"
+                            android:layout_width="61dp"
                             android:layout_height="match_parent"
                             android:background="@android:color/transparent"
                             android:src="@drawable/gopy" />
@@ -253,8 +263,8 @@
                         <ImageButton
                             android:id="@+id/imageButtonCaNhan"
                             android:layout_width="wrap_content"
-                            android:background="@android:color/transparent"
                             android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
                             android:src="@drawable/canhan" />
                     </TableRow>
 
@@ -279,9 +289,9 @@
                         <TextView
                             android:id="@+id/textView25"
                             android:layout_width="wrap_content"
-                            android:textAlignment="center"
+                            android:layout_height="wrap_content"
                             android:text="QR"
-                            android:layout_height="wrap_content" />
+                            android:textAlignment="center" />
 
                         <TextView
                             android:id="@+id/textView26"
@@ -318,14 +328,14 @@
 
                         <Button
                             android:id="@+id/btnCheckCalendar"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:drawableLeft="@android:drawable/ic_menu_my_calendar"
                             android:text="Xem lịch" />
 
                         <Button
                             android:id="@+id/btnHealthMonitoring"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:drawableLeft="@android:drawable/ic_menu_myplaces"
                             android:text="sức khỏe" />

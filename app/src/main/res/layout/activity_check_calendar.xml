@@ -153,7 +153,7 @@
             android:paddingLeft="10dp"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:background="#0012FF"
+            android:background="@drawable/draw"
             app:srcCompat="?attr/actionModeCloseDrawable" />
 
         <TextView
@@ -162,8 +162,9 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center_vertical"
-            android:paddingLeft="10dp"
+            android:paddingLeft="20dp"
             android:text="Lịch học"
+            android:background="@drawable/draw"
             android:textColor="@color/white" />
 
         <ImageButton
@@ -171,6 +172,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="2"
+            android:background="@drawable/draw"
             app:srcCompat="@drawable/event" />
     </LinearLayout>
 
