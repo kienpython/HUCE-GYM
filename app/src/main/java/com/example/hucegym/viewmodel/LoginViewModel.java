@@ -17,26 +17,30 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-
 public class LoginViewModel extends BaseObservable {
     private String username;
     private String password;
     private Context context;
+
     public LoginViewModel(Context context) {
         this.context = context;
     }
+
     @Bindable
     public String getUsername() {
         return username;
     }
+
     public void setUsername(String username) {
         this.username = username;
         notifyPropertyChanged(BR.username);
     }
+
     @Bindable
     public String getPassword() {
         return password;
     }
+
     public void setPassword(String password) {
         this.password = password;
         notifyPropertyChanged(BR.password);
@@ -47,8 +51,9 @@ public class LoginViewModel extends BaseObservable {
         Intent intent = new Intent(context, RegisterActivity.class);
         context.startActivity(intent);
     }
+
     public void loginUser() {
-        ApiService apiService = RetrofitClient.getInstance().create(ApiService.class);
+        ApiService apiService = RetrofitClient.getRetroClient().create(ApiService.class);
         Call<User> call = apiService.loginUser(username, password);
 
         call.enqueue(new Callback<User>() {
@@ -71,26 +76,5 @@ public class LoginViewModel extends BaseObservable {
                 // Xử lý lỗi kết nối
             }
         });
-    }
-
-//    public void loginUser() {
-//        if (isValidCredentials(username, password)) {
-//            Log.d("LoginViewModel", "Đăng nhập thành công");
-//
-//            // Chuyển sang MainActivity
-//            Intent intent = new Intent(context, MainActivity.class);
-//            context.startActivity(intent);
-//
-//            // Kiểu vào trang chủ rồi sẽ không back về login được
-//            // ((Activity) context).finish();
-//        } else {
-//            Log.d("LoginViewModel", "Đăng nhập thất bại");
-//            // đăng nhập xịt thì tự nhập lại được rồi sai đâu tự biết nhỉ :))
-//        }
-//    }
-    private boolean isValidCredentials(String username, String password) {
-        // kiểm tra thông tin đăng nhập
-        // giả sử username và password đều là "admin"
-        return "admin".equals(username) && "admin".equals(password);
     }
 }
