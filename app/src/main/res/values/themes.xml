@@ -12,5 +12,7 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+        <item name="ThemeOverlay.AppCompat.Dark.ActionBar">?android:attr/textColorPrimary</item>
+        
     </style>
 </resources>

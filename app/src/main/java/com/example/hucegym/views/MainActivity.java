@@ -10,6 +10,10 @@ import android.text.Html;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
+import android.widget.Toast;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -20,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     TextView txtQuenMatKhau;
     private Button btnDangNhap;
     private Button btnDangKy;
+    private String[] danhSachGoiTap = {"Gói Tập A", "Gói Tập B", "Gói Tập C", "Gói Tập D"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,5 +81,6 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
 //        finish();
     }
+
 
 }
