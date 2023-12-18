@@ -3,9 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.hucegym">
 
-    <uses-permission android:name="android.permission.INTERNET" />
+<!--    -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+
 
     <application
+        android:usesCleartextTraffic="true"
+
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -37,7 +42,8 @@
             android:exported="false" />
         <activity
             android:name=".viewmodel.LoginViewModel"
-            android:exported="false" />
+            android:exported="false"
+            tools:ignore="Instantiatable" />
         <activity
             android:name=".views.MainActivity"
             android:exported="true">

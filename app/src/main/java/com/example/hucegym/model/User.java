@@ -1,13 +1,16 @@
 package com.example.hucegym.model;
 
 public class User {
+    private String id_user;
     private String username;
     private String password;
-    private String chuc_vu;
 
-    public User(String username, String password) {
-        this.username = username;
-        this.password = password;
+    public String getId_user() {
+        return id_user;
+    }
+
+    public void setId_user(String id_user) {
+        this.id_user = id_user;
     }
 
     public String getUsername() {
@@ -24,13 +27,6 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public String getChuc_vu() {
-        return chuc_vu;
-    }
-    public void setChuc_vu(String chuc_vu) {
-        this.chuc_vu = chuc_vu;
     }
 }
 
