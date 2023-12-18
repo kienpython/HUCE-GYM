@@ -29,6 +29,7 @@
                     android:layout_width="160dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="30dp"
+                    android:rotationY="13"
                     android:src="@drawable/logo"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toRightOf="parent"
@@ -51,9 +52,9 @@
                     android:layout_width="144dp"
                     android:layout_height="52dp"
                     android:layout_marginTop="28dp"
-                    android:layout_marginEnd="16dp"
-                    android:text="Đăng ký"
+                    android:layout_marginEnd="40dp"
                     android:onClick="@{() -> loginViewModel.navigateToRegister()}"
+                    android:text="Đăng ký"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/edPassword" />
 
@@ -61,10 +62,10 @@
                     android:id="@+id/btnDangNhap"
                     android:layout_width="144dp"
                     android:layout_height="54dp"
-                    android:layout_marginStart="20dp"
+                    android:layout_marginStart="40dp"
                     android:layout_marginTop="28dp"
-                    android:text="Đăng nhập"
                     android:onClick="@{() -> loginViewModel.loginUser()}"
+                    android:text="Đăng nhập"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/edPassword" />
 
@@ -72,32 +73,41 @@
                     android:id="@+id/edUsername"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
                     android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
                     android:hint="Username"
-                    app:layout_constraintTop_toBottomOf="@id/tvLogin"
-                    tools:layout_editor_absoluteX="4dp" />
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvLogin" />
 
                 <EditText
                     android:id="@+id/edPassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
                     android:layout_marginTop="8dp"
+                    android:layout_marginEnd="20dp"
                     android:hint="Password"
                     android:inputType="textPassword"
-                    app:layout_constraintTop_toBottomOf="@id/edUsername"
-                    tools:layout_editor_absoluteX="4dp" />
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/edUsername" />
 
                 <TextView
                     android:id="@+id/txtQuenMatKhau"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="48dp"
+                    android:layout_width="137dp"
+                    android:layout_height="33dp"
+                    android:layout_marginLeft="32dp"
                     android:layout_marginTop="30dp"
                     android:layout_marginBottom="20dp"
+                    android:text="Quên mật khẩu"
+                    android:textSize="18dp"
                     android:textStyle="italic"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintLeft_toLeftOf="@id/btnDangKy"
-                    app:layout_constraintTop_toBottomOf="@id/btnDangKy" />
+                    app:layout_constraintTop_toBottomOf="@id/btnDangKy"
+                    app:layout_constraintVertical_bias="1.0" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </ScrollView>
