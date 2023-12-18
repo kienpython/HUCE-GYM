@@ -164,6 +164,7 @@
                             android:layout_height="match_parent"
                             android:rotation="-17"
                             android:rotationX="8"
+                            android:background="@android:color/transparent"
                             android:src="@drawable/nhacnho" />
 
                         <ImageButton
