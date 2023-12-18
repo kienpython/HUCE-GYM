@@ -64,7 +64,7 @@ public class LoginViewModel extends BaseObservable {
                     if (user != null) {
                         // Xử lý đăng nhập thành công, ví dụ:
                         String name = user.getUsername();
-                        String chucVu = user.getChuc_vu();
+//                        String chucVu = user.getChuc_vu();
                     } else {
                         // Xử lý đăng nhập thất bại
                     }
