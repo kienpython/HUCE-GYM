@@ -17,8 +17,7 @@
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:layout_editor_absoluteX="80dp"
-            tools:layout_editor_absoluteY="16dp">
+            tools:layout_editor_absoluteX="80dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -46,28 +45,6 @@
                     app:layout_constraintLeft_toLeftOf="@id/imgAvatar"
                     app:layout_constraintRight_toRightOf="@id/imgAvatar"
                     app:layout_constraintTop_toBottomOf="@id/imgAvatar" />
-
-                <Button
-                    android:id="@+id/btnDangKy"
-                    android:layout_width="144dp"
-                    android:layout_height="52dp"
-                    android:layout_marginTop="28dp"
-                    android:layout_marginEnd="40dp"
-                    android:onClick="@{() -> loginViewModel.navigateToRegister()}"
-                    android:text="Đăng ký"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/edPassword" />
-
-                <Button
-                    android:id="@+id/btnDangNhap"
-                    android:layout_width="144dp"
-                    android:layout_height="54dp"
-                    android:layout_marginStart="40dp"
-                    android:layout_marginTop="28dp"
-                    android:onClick="@{() -> loginViewModel.loginUser()}"
-                    android:text="Đăng nhập"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/edPassword" />
 
                 <EditText
                     android:id="@+id/edUsername"
@@ -98,16 +75,42 @@
                     android:id="@+id/txtQuenMatKhau"
                     android:layout_width="137dp"
                     android:layout_height="33dp"
-                    android:layout_marginLeft="32dp"
-                    android:layout_marginTop="30dp"
-                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="20dp"
                     android:text="Quên mật khẩu"
                     android:textSize="18dp"
                     android:textStyle="italic"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintLeft_toLeftOf="@id/btnDangKy"
-                    app:layout_constraintTop_toBottomOf="@id/btnDangKy"
-                    app:layout_constraintVertical_bias="1.0" />
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout8" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout8"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edPassword">
+
+                    <Button
+                        android:id="@+id/btnDangNhap"
+                        android:layout_width="144dp"
+                        android:layout_height="54dp"
+                        android:layout_weight="1"
+                        android:layout_marginRight="20dp"
+                        android:onClick="@{() -> loginViewModel.loginUser()}"
+                        android:text="Đăng nhập" />
+
+                    <Button
+                        android:layout_weight="1"
+                        android:id="@+id/btnDangKy"
+                        android:layout_width="144dp"
+                        android:layout_height="52dp"
+                        android:onClick="@{() -> loginViewModel.navigateToRegister()}"
+                        android:text="Đăng ký" />
+                </LinearLayout>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </ScrollView>
