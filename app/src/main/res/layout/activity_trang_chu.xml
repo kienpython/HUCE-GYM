@@ -44,6 +44,7 @@
                     android:layout_marginStart="5dp"
                     android:layout_marginTop="20dp"
                     android:text="TextView"
+                    android:textStyle="bold"
                     app:layout_constraintStart_toEndOf="@+id/textView"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -64,9 +65,11 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
                     android:layout_marginEnd="15dp"
+                    android:background="@android:color/transparent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@android:drawable/ic_popup_reminder" />
+                    app:srcCompat="@android:drawable/ic_popup_reminder"
+                    app:tint="#4E5554" />
 
                 <TableLayout
                     android:id="@+id/tableLayout"
@@ -122,6 +125,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Xem bài tập"
+                            android:textStyle="bold"
                             android:textAlignment="center" />
 
                         <TextView
@@ -129,6 +133,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Sự kiện"
+                            android:textStyle="bold"
                             android:textAlignment="center" />
 
                         <TextView
@@ -136,6 +141,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Gói tập"
+                            android:textStyle="bold"
                             android:textAlignment="center" />
 
                         <TextView
@@ -143,6 +149,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="PT"
+                            android:textStyle="bold"
                             android:textAlignment="center" />
                     </TableRow>
 
@@ -191,6 +198,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Lớp"
+                            android:textStyle="bold"
                             android:textAlignment="center" />
 
                         <TextView
@@ -198,6 +206,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Điều khoản"
+                            android:textStyle="bold"
                             android:textAlignment="center" />
 
                         <TextView
@@ -205,6 +214,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Nhắc nhở"
+                            android:textStyle="bold"
                             android:textAlignment="center" />
 
                         <TextView
@@ -212,6 +222,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Góp ý"
+                            android:textStyle="bold"
                             android:textAlignment="center" />
                     </TableRow>
                 </TableLayout>
@@ -237,7 +248,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="61dp"
                             android:background="@android:color/transparent"
-                            android:src="@android:drawable/btn_star" />
+                            android:src="@drawable/home" />
 
                         <ImageButton
                             android:id="@+id/imageButtonLich"
@@ -277,6 +288,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Trang chủ"
+                            android:textStyle="bold"
                             android:textAlignment="center" />
 
                         <TextView
@@ -284,6 +296,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Xem lịch"
+                            android:textStyle="bold"
                             android:textAlignment="center" />
 
                         <TextView
@@ -291,6 +304,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="QR"
+                            android:textStyle="bold"
                             android:textAlignment="center" />
 
                         <TextView
@@ -298,6 +312,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Góp ý"
+                            android:textStyle="bold"
                             android:textAlignment="center" />
 
                         <TextView
@@ -305,6 +320,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Cá Nhân"
+                            android:textStyle="bold"
                             android:textAlignment="center" />
                     </TableRow>
 
