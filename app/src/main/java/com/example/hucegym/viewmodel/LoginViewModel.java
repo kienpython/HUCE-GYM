@@ -8,8 +8,6 @@ import androidx.databinding.BaseObservable;
 import androidx.databinding.Bindable;
 
 import com.example.hucegym.BR;
-import com.example.hucegym.connect.ApiService;
-import com.example.hucegym.connect.RetrofitClient;
 import com.example.hucegym.model.User;
 import com.example.hucegym.views.RegisterActivity;
 

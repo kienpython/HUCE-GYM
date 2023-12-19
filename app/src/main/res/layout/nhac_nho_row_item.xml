@@ -9,7 +9,7 @@
     android:padding="8dp">
 
     <TextView
-        android:id="@+id/txt_name_nhac_nho"
+        android:id="@+id/txt_add_at_nhac_nho"
         android:text="Tiêu đề"
         android:textStyle="bold"
         android:layout_width="match_parent"
