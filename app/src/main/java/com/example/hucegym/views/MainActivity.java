@@ -2,11 +2,13 @@ package com.example.hucegym.views;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
+
 import androidx.databinding.ViewDataBinding;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Html;
@@ -22,7 +24,9 @@ import android.widget.Toast;
 import com.example.hucegym.R;
 import com.example.hucegym.adapter.UserAdapter;
 import com.example.hucegym.connect.ApiServiceLogin;
+import com.example.hucegym.databinding.ActivityLoginBinding;
 import com.example.hucegym.model.User;
+import com.example.hucegym.viewmodel.LoginViewModel;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,11 +38,8 @@ import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
     TextView txtQuenMatKhau;
-    private Button btnDangNhap;
-    private EditText edUsername;
-    private EditText edPassword;
     private Button btnDangKy;
-    private List<User> mListUser;
+    private ActivityLoginBinding activityLoginBinding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,63 +60,12 @@ public class MainActivity extends AppCompatActivity {
             Log.e("Init", ex.getMessage());
         }
     }
-
-    //Call API
-    private void getListUsers(){
-        ApiServiceLogin.apiServiceLogin.getListUsers().enqueue(new Callback<List<User>>() {
-            @Override
-            public void onResponse(Call<List<User>> call, Response<List<User>> response) {
-                mListUser = response.body();
-            }
-
-            @Override
-            public void onFailure(Call<List<User>> call, Throwable t) {
-                Toast.makeText(MainActivity.this, "Call api error", Toast.LENGTH_SHORT).show();
-            }
-        });
-    }
-
-    // Xử lý sự kiện đăng nhập
     public void login(){
-        edUsername = findViewById(R.id.edUsername);
-        edPassword = findViewById(R.id.edPassword);
-        btnDangNhap = findViewById(R.id.btnDangNhap);
-        // Bắt sự kiện khi điều khoản được click
-        btnDangNhap.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                getListUsers();
-                String strUsername = edUsername.getText().toString().trim();
-                String strPassword = edPassword.getText().toString().trim();
-//              Rỗng thì không làm gì cả
-                if (mListUser==null || mListUser.isEmpty()){
-                    return;
-                }
-
-                boolean isHasUser = false;
-                for (User user : mListUser){
-                    if (strUsername.equals(user.getUsername()) && strPassword.equals(user.getPassword())){
-                        isHasUser = true;
-                        break;
-                    }
-                }
-
-                if (isHasUser){
-                    startLoginActivity();
-                }
-                else{
-                    Toast.makeText(MainActivity.this, "Tài khoản hoặc mật khẩu không chính xác!", Toast.LENGTH_SHORT).show();
-                }
-
-            }
-        });
+        activityLoginBinding = DataBindingUtil.setContentView(this,R.layout.activity_login);
+        LoginViewModel loginViewModel = new LoginViewModel(MainActivity.this);
+        activityLoginBinding.setLoginViewModel(loginViewModel);
     }
-    // Chuyển trang đến trang chủ
-    private void startLoginActivity() {
-        Intent intent = new Intent(MainActivity.this, TrangChuActivity.class);
-        startActivity(intent);
-        finish();
-    }
+
 
 //    Xử lý sự kiện khi ấn vào nút đăng ký
     public void register(){

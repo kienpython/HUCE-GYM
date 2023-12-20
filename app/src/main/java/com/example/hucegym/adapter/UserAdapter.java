@@ -60,21 +60,5 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
         }
     }
 
-    // Thêm phương thức để kiểm tra đăng nhập
-//    public void checkLogin(int position) {
-//        if (currentViewHolder != null) {
-//            User user = mListUser.get(position);
-//            if (user != null) {
-//                if (currentViewHolder.edUsername.getText().toString().equals(user.getUsername()) && currentViewHolder.edPassword.getText().toString().equals(user.getPassword())) {
-//                    // Hiển thị Toast khi đăng nhập thành công
-//                    Toast.makeText(currentViewHolder.itemView.getContext(), "Đăng nhập thành công!", Toast.LENGTH_SHORT).show();
-//                } else {
-//                    // Hiển thị Toast khi đăng nhập không thành công
-//                    Toast.makeText(currentViewHolder.itemView.getContext(), "Tài khoản hoặc mật khẩu không chính xác!", Toast.LENGTH_SHORT).show();
-//                }
-//            }
-//        }
-
-//    }
 
 }
