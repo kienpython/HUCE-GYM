@@ -44,9 +44,11 @@
             android:name=".viewmodel.LoginViewModel"
             android:exported="false"
             tools:ignore="Instantiatable" />
+
         <activity
             android:name=".views.MainActivity"
             android:exported="true">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

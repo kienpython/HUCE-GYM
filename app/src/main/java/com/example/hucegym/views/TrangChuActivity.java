@@ -18,6 +18,7 @@ public class TrangChuActivity extends AppCompatActivity {
     private Button btnCheckCalendar;
     private Button btnHealthMonitoring;
     private ImageButton imgExercises;
+    private ImageButton imageButtonCaNhan;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +28,24 @@ public class TrangChuActivity extends AppCompatActivity {
         checkCalendar();
         healthMonitoring();
         exercisesActivity();
+        caNhan();
+    }
+
+    // Chuyển sang phần cá nhân
+    private void startHoiVienActivity() {
+        Intent intent = new Intent(TrangChuActivity.this, HoiVienActivity.class);
+        startActivity(intent);
+    }
+    // Xử lý sự kiện nút cá nhân
+    private void caNhan(){
+        imageButtonCaNhan = findViewById(R.id.imageButtonCaNhan);
+        imageButtonCaNhan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                startHoiVienActivity();
+            }
+        });
     }
 
     // Chuyển trang sang phần điều khoản
