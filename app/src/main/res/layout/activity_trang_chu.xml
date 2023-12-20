@@ -5,8 +5,8 @@
 
     <data>
         <variable
-            name="LoginViewModel"
-            type="com.example.hucegym.viewmodel.LoginViewModel" />
+            name="TrangChuViewModel"
+            type="com.example.hucegym.viewmodel.TrangChuViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -91,6 +91,7 @@
                             android:id="@+id/imgExercises"
                             android:layout_width="wrap_content"
                             android:layout_height="68dp"
+                            android:onClick="@{() -> TrangChuViewModel.onClickExercises()}"
                             android:background="@android:color/transparent"
                             android:src="@drawable/baitap" />
 

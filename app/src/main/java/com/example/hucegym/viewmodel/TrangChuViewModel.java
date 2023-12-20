@@ -1,6 +1,32 @@
 package com.example.hucegym.viewmodel;
 
-public class TrangChuViewModel {
+import android.content.Context;
+import android.content.Intent;
+
+import androidx.databinding.BaseObservable;
+
+import com.example.hucegym.views.ExercisesActivity;
+
+public class TrangChuViewModel extends BaseObservable {
+    public Context context;
+
+    public TrangChuViewModel(Context context) {
+        this.context = context;
+    }
+
+    // Chuyển sang phần xem bài tập
+    private void startExercisesActivity() {
+        Intent intent = new Intent(context, ExercisesActivity.class);
+        context.startActivity(intent);
+    }
+    // Xử lý sự kiện nút xem bài tập
+    public void onClickExercises() {
+        startExercisesActivity();
+    }
+
+
+
+
 
 //    public void handleXemLich(Context context) {
 //        showToast("Xem lịch clicked");

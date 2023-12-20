@@ -1,64 +1,109 @@
 package com.example.hucegym.viewmodel;
 
-//
-//public class LoginViewModel extends BaseObservable {
-//    private String username;
-//    private String password;
-//    private Context context;
-//
-//    public LoginViewModel(Context context) {
-//        this.context = context;
-//    }
-//
-//    @Bindable
-//    public String getUsername() {
-//        return username;
-//    }
-//
-//    public void setUsername(String username) {
-//        this.username = username;
-//        notifyPropertyChanged(BR.username);
-//    }
-//
-//    @Bindable
-//    public String getPassword() {
-//        return password;
-//    }
-//
-//    public void setPassword(String password) {
-//        this.password = password;
-//        notifyPropertyChanged(BR.password);
-//    }
-//
-//    public void navigateToRegister() {
-//        Log.d("LoginViewModel", "chuyển qua Register");
-//        Intent intent = new Intent(context, RegisterActivity.class);
-//        context.startActivity(intent);
-//    }
-//
-//    public void loginUser() {
-//        ApiService apiService = RetrofitClient.getRetroClient().create(ApiService.class);
-//        Call<User> call = apiService.loginUser(username, password);
-//
-//        call.enqueue(new Callback<User>() {
-//            @Override
-//            public void onResponse(Call<User> call, Response<User> response) {
-//                if (response.isSuccessful()) {
-//                    User user = response.body();
-//                    if (user != null) {
-//                        // Xử lý đăng nhập thành công, ví dụ:
-//                        String name = user.getUsername();
-////                        String chucVu = user.getChuc_vu();
-//                    } else {
-//                        // Xử lý đăng nhập thất bại
-//                    }
-//                }
-//            }
-//
-//            @Override
-//            public void onFailure(Call<User> call, Throwable t) {
-//                // Xử lý lỗi kết nối
-//            }
-//        });
-//    }
-//}
+import android.content.Context;
+import android.content.Intent;
+import android.util.Log;
+import android.view.View;
+import android.widget.Toast;
+
+import androidx.databinding.BaseObservable;
+import androidx.databinding.Bindable;
+import androidx.databinding.Observable;
+import androidx.databinding.ObservableField;
+
+import com.example.hucegym.BR;
+import com.example.hucegym.R;
+import com.example.hucegym.connect.ApiServiceLogin;
+import com.example.hucegym.model.User;
+import com.example.hucegym.views.MainActivity;
+import com.example.hucegym.views.RegisterActivity;
+import com.example.hucegym.views.TrangChuActivity;
+
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
+public class LoginViewModel extends BaseObservable {
+    private String username;
+    private String password;
+    private List<User> mListUser;
+    public ObservableField<String> messageLogin = new ObservableField<>();
+    public ObservableField<Boolean> isShowMessage = new ObservableField<>();
+    public ObservableField<Boolean> isSuccess = new ObservableField<>();
+    public Context context;
+
+    public LoginViewModel(Context context) {
+        this.context = context;
+    }
+
+    @Bindable
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+        notifyPropertyChanged(BR.username);
+    }
+
+    @Bindable
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+        notifyPropertyChanged(BR.password);
+    }
+
+    //Call API
+    private void getListUsers(){
+        ApiServiceLogin.apiServiceLogin.getListUsers().enqueue(new Callback<List<User>>() {
+            @Override
+            public void onResponse(Call<List<User>> call, Response<List<User>> response) {
+                mListUser = response.body();
+            }
+
+            @Override
+            public void onFailure(Call<List<User>> call, Throwable t) {
+                Toast.makeText(context.getApplicationContext(), "Call api error", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+    // Xử lý sự kiện đăng nhập
+    public void onClickLogin() {
+        // Khi click vào button đăng nhập thì mới hiện message
+        isShowMessage.set(true);
+        getListUsers();
+//      Rỗng thì không làm gì cả
+        if (mListUser==null || mListUser.isEmpty()){
+            return;
+        }
+
+        boolean isHasUser = false;
+        for (User user : mListUser){
+            if (username.equals(user.getUsername()) && password.equals(user.getPassword())){
+                isHasUser = true;
+                break;
+            }
+        }
+
+        if (isHasUser){
+            startLoginActivity();
+            isSuccess.set(true);
+        }
+        else{
+            isSuccess.set(false);
+            messageLogin.set("Username or password invalid!");
+        }
+    }
+
+    // Chuyển trang đến trang chủ
+    private void startLoginActivity() {
+        Intent intent = new Intent(context, TrangChuActivity.class);
+        context.startActivity(intent);
+    }
+}
