@@ -47,14 +47,13 @@ import java.util.List;
 
             public NhacNhoViewHolder(@NonNull View itemView) {
                 super(itemView);
-                txtTieuDe = itemView.findViewById(R.id.txt_name_nhac_nho);
+                txtTieuDe = itemView.findViewById(R.id.txt_add_at_nhac_nho);
                 txtNoiDung = itemView.findViewById(R.id.txt_noi_dung_nhac_nho);
 
                 itemView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
                         // Xử lý khi item được nhấn
-                        // Có thể chuyển sang màn hình chi tiết nhắc nhở
                     }
                 });
             }

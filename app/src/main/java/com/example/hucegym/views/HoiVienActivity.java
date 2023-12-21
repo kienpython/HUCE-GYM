@@ -1,6 +1,7 @@
 package com.example.hucegym.views;
 
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,6 +21,13 @@ public class HoiVienActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ca_nhan);
 
+        Button btnLogout = findViewById(R.id.btnLogout);
+        btnLogout.setOnClickListener(v -> {
+            // Gọi phương thức đăng xuất từ ViewModel
+            hoiVienViewModel.logout();
+            finish();
+        });
+
         // Khởi tạo ViewModel
         hoiVienViewModel = new ViewModelProvider(this).get(HoiVienViewModel.class);
 
@@ -38,7 +46,13 @@ public class HoiVienActivity extends AppCompatActivity {
         TextView textViewIDHV = findViewById(R.id.textViewIDHV);
         TextView textViewHoTenHV = findViewById(R.id.textViewHoTenHV);
         TextView textViewNgaySinhHV = findViewById(R.id.textViewNgaySinhHV);
-        // ... (Thêm các TextView khác)
+        TextView textViewGioiTinhHV = findViewById(R.id.textViewGioiTinhHV);
+        TextView textViewTuoiHV = findViewById(R.id.textViewTuoiHV);
+        TextView textViewSDTHV = findViewById(R.id.textViewSDTHV);
+        TextView textViewEmailHV = findViewById(R.id.textViewEmailHV);
+        TextView textViewCMNDHV = findViewById(R.id.textViewCMNDHV);
+        TextView textViewBienxeHV = findViewById(R.id.textViewBienxeHV);
+
 
         // Liên kết với ViewModel để theo dõi dữ liệu
         hoiVienViewModel.getHoiVienList().observe(this, hoiVienList -> {
@@ -47,7 +61,12 @@ public class HoiVienActivity extends AppCompatActivity {
                 textViewIDHV.setText(hoiVien.getId_hv());
                 textViewHoTenHV.setText(hoiVien.getName_hv());
                 textViewNgaySinhHV.setText(hoiVien.getNgay_sinh());
-                // ... (Thiết lập dữ liệu cho các TextView khác)
+                textViewGioiTinhHV.setText(hoiVien.getGioi_tinh());
+                textViewTuoiHV.setText(hoiVien.getTuoi());
+                textViewSDTHV.setText(hoiVien.getSdt());
+                textViewEmailHV.setText(hoiVien.getEmail());
+                textViewCMNDHV.setText(hoiVien.getCmnd());
+                textViewBienxeHV.setText(hoiVien.getBien_xe());
             }
         });
     }
@@ -55,4 +74,5 @@ public class HoiVienActivity extends AppCompatActivity {
     private void updateUI(List<HoiVien> hoiVienList) {
         // Cập nhật giao diện người dùng khi có dữ liệu mới từ ViewModel
     }
+
 }

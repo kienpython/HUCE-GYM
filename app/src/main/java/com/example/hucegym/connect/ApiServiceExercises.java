@@ -1,8 +1,6 @@
 package com.example.hucegym.connect;
 
 import com.example.hucegym.model.Exercises;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;

@@ -1,5 +1,7 @@
 package com.example.hucegym.viewmodel;
 
+import android.content.Intent;
+
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
@@ -14,6 +16,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class HoiVienViewModel extends ViewModel {
+
     private MutableLiveData<List<HoiVien>> hoiVienList = new MutableLiveData<>();
 
     public LiveData<List<HoiVien>> getHoiVienList() {
@@ -34,5 +37,14 @@ public class HoiVienViewModel extends ViewModel {
                 // Xử lý lỗi nếu có
             }
         });
+    }
+    public void logout() {
+        Intent intent = new Intent("android.intent.action.MAIN");
+        intent.addCategory("android.intent.category.LAUNCHER");
+        startActivity(intent);
+    }
+    private void finish() {
+    }
+    private void startActivity(Intent intent) {
     }
 }

@@ -1,27 +1,40 @@
 package com.example.hucegym.model;
 
+import java.util.Date;
+
 public class NhacNho {
-    private String tieuDe;
-    private String noiDung;
+    private String id_nhac_nho;
+    private String notice;
+    private Date addAt;
 
-    public NhacNho(String tieuDe, String noiDung) {
-        this.tieuDe = tieuDe;
-        this.noiDung = noiDung;
+    public NhacNho(String id_nhac_nho, String notice, Date addAt) {
+        this.id_nhac_nho = id_nhac_nho;
+        this.notice = notice;
+        this.addAt = addAt;
     }
 
-    public String getTieuDe() {
-        return tieuDe;
+    public String getId_nhac_nho() {
+        return id_nhac_nho;
     }
 
-    public void setTieuDe(String tieuDe) {
-        this.tieuDe = tieuDe;
+    public void setId_nhac_nho(String id_nhac_nho) {
+        this.id_nhac_nho = id_nhac_nho;
     }
 
-    public String getNoiDung() {
-        return noiDung;
+    public String getNotice() {
+        return notice;
     }
 
-    public void setNoiDung(String noiDung) {
-        this.noiDung = noiDung;
+    public void setNotice(String notice) {
+        this.notice = notice;
     }
+
+    public Date getAddAt() {
+        return addAt;
+    }
+
+    public void setAddAt(Date addAt) {
+        this.addAt = addAt;
+    }
+
 }

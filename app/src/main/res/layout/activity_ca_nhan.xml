@@ -88,7 +88,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewSĐTHV" />
+            app:layout_constraintTop_toBottomOf="@+id/textViewSDTHV" />
 
         <View
             android:id="@+id/view7"
@@ -101,7 +101,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewGmailHV" />
+            app:layout_constraintTop_toBottomOf="@+id/textViewEmailHV" />
 
         <View
             android:id="@+id/view8"
@@ -122,9 +122,8 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="190dp"
             android:layout_marginTop="20dp"
-            android:text="TextView"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewGmailHV" />
+            app:layout_constraintTop_toBottomOf="@+id/textViewEmailHV" />
 
         <TextView
             android:id="@+id/textViewNgaySinhHV"
@@ -132,19 +131,17 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="190dp"
             android:layout_marginTop="20dp"
-            android:text="TextView"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textViewIDHV" />
 
         <TextView
-            android:id="@+id/textViewGmailHV"
+            android:id="@+id/textViewEmailHV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="190dp"
             android:layout_marginTop="20dp"
-            android:text="TextView"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewSĐTHV" />
+            app:layout_constraintTop_toBottomOf="@+id/textViewSDTHV" />
 
         <TextView
             android:id="@+id/textViewIDHV"
@@ -162,7 +159,6 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="190dp"
             android:layout_marginTop="20dp"
-            android:text="TextView"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textViewNgaySinhHV" />
 
@@ -172,17 +168,15 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="190dp"
             android:layout_marginTop="20dp"
-            android:text="TextView"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textViewGioiTinhHV" />
 
         <TextView
-            android:id="@+id/textViewSĐTHV"
+            android:id="@+id/textViewSDTHV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="190dp"
             android:layout_marginTop="20dp"
-            android:text="TextView"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textViewTuoiHV" />
 
@@ -192,10 +186,16 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="190dp"
             android:layout_marginTop="20dp"
-            android:text="TextView"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textViewCMNDHV" />
 
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="225dp"
+            android:background="@drawable/draw"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></LinearLayout>
     <TextView
         android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
@@ -214,7 +214,7 @@
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:layout_marginTop="16dp"
-        android:src="@drawable/logo"
+        android:src="@drawable/canhan"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvTitle" />
@@ -238,6 +238,7 @@
         android:layout_marginTop="8dp"
         android:text="Họ và tên"
         android:textStyle="bold"
+            android:textSize="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgAvatar" />
@@ -309,7 +310,7 @@
         android:textStyle="bold"
         android:text="Gmail:"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewSĐTHV" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewSDTHV" />
 
     <TextView
         android:id="@+id/textViewCMND1"
@@ -320,7 +321,7 @@
         android:textStyle="bold"
         android:text="CMND:"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewGmailHV" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewEmailHV" />
 
         <TextView
             android:id="@+id/textViewIDHV1"
