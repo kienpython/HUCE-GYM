@@ -5,8 +5,20 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
+import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.BindingAdapter;
+import androidx.databinding.DataBindingUtil;
+import androidx.databinding.ObservableArrayList;
+import androidx.databinding.ObservableBoolean;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.hucegym.adapter.ExercisesAdapter;
+import com.example.hucegym.databinding.ActivityLoginBinding;
+import com.example.hucegym.databinding.ActivityTrangChuBinding;
+import com.example.hucegym.model.Exercises;
+import com.example.hucegym.viewmodel.LoginViewModel;
 import com.example.hucegym.viewmodel.TrangChuViewModel;
 import com.example.hucegym.R;
 
@@ -18,10 +30,7 @@ public class TrangChuActivity extends AppCompatActivity {
     private Button btnCheckCalendar;
     private Button btnHealthMonitoring;
     private ImageButton imgExercises;
-    private ImageButton imageButtonCaNhan;
-    private ImageButton ibtnNhacNho;
-    private ImageButton imageButton3;
-
+    private ActivityTrangChuBinding activityTrangChuBinding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,10 +39,19 @@ public class TrangChuActivity extends AppCompatActivity {
         checkCalendar();
         healthMonitoring();
         exercisesActivity();
-        checkcanhan();
-        checkNhacNho();
-        checkNhacNho1();
     }
+
+    // Chuyển sang trang exercises
+    private void exercisesActivity(){
+        activityTrangChuBinding = DataBindingUtil.setContentView(this,R.layout.activity_trang_chu);
+        TrangChuViewModel trangChuViewModel = new TrangChuViewModel(TrangChuActivity.this);
+        activityTrangChuBinding.setTrangChuViewModel(trangChuViewModel);
+    }
+
+
+
+
+
 
     // Chuyển trang sang phần điều khoản
     private void startRulesActivity() {
@@ -91,66 +109,4 @@ public class TrangChuActivity extends AppCompatActivity {
         });
     }
 
-    // Chuyển sang phần xem bài tập
-    private void startExercisesActivity() {
-        Intent intent = new Intent(TrangChuActivity.this, ExercisesActivity.class);
-        startActivity(intent);
-    }
-    // Xử lý sự kiện nút xem bài tập
-    private void exercisesActivity(){
-        imgExercises = findViewById(R.id.imgExercises);
-        imgExercises.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                startExercisesActivity();
-            }
-        });
-    }
-
-    // Xem cá nhân
-    private void startHoiVienActivity() {
-        Intent intent = new Intent(TrangChuActivity.this, HoiVienActivity.class);
-        startActivity(intent);
-    }
-    private void checkcanhan(){
-        imageButtonCaNhan = findViewById(R.id.imageButtonCaNhan);
-        imageButtonCaNhan.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                startHoiVienActivity();
-            }
-        });
-    }
-
-    // xem nhắc nhở
-    private void startNhacNhoActivity() {
-        Intent intent = new Intent(TrangChuActivity.this, NhacNhoActivity.class);
-        startActivity(intent);
-    }
-    private void checkNhacNho(){
-        ibtnNhacNho = findViewById(R.id.ibtnNhacNho);
-        ibtnNhacNho.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                startExercisesActivity();
-            }
-        });
-    }
-    private void startNhacNho1Activity() {
-        Intent intent = new Intent(TrangChuActivity.this, NhacNhoActivity.class);
-        startActivity(intent);
-    }
-    private void checkNhacNho1(){
-        imageButton3 = findViewById(R.id.imageButton3);
-        imageButton3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                startExercisesActivity();
-            }
-        });
-    }
 }
