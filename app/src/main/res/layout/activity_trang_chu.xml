@@ -23,6 +23,7 @@
             app:layout_constraintVertical_bias="1.0">
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                tools:viewBindingIgnore="true"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -48,28 +49,25 @@
                     app:layout_constraintStart_toEndOf="@+id/textView"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <ImageButton
-                    android:id="@+id/imageButton2"
-                    android:layout_width="596dp"
-                    android:layout_height="151dp"
-                    android:layout_marginTop="60dp"
-                    android:background="@android:color/transparent"
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/view_pager"
+                    android:layout_width="0dp"
+                    android:layout_height="220dp"
+                    android:layout_marginTop="20dp"
+
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tableLayout"
-                    app:srcCompat="@drawable/logo" />
+                    app:layout_constraintTop_toBottomOf="@+id/tableLayout" />
 
-                <ImageButton
-                    android:id="@+id/imageButton3"
-                    android:layout_width="wrap_content"
+                <me.relex.circleindicator.CircleIndicator3
+                    android:id="@+id/circle_indicator"
+                    android:layout_width="50dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginEnd="15dp"
-                    android:background="@android:color/transparent"
+                    android:layout_marginTop="20dp"
+                    app:ci_drawable="@drawable/bg_indicator"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@android:drawable/ic_popup_reminder"
-                    app:tint="#4E5554" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view_pager" />
 
                 <TableLayout
                     android:id="@+id/tableLayout"
@@ -233,12 +231,12 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
-                    android:layout_marginTop="70dp"
+                    android:layout_marginTop="40dp"
                     android:layout_marginEnd="20dp"
                     android:stretchColumns="*"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/imageButton2">
+                    app:layout_constraintTop_toBottomOf="@+id/circle_indicator">
 
                     <TableRow
                         android:layout_width="match_parent"
@@ -289,40 +287,40 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Trang chủ"
-                            android:textStyle="bold"
-                            android:textAlignment="center" />
+                            android:textAlignment="center"
+                            android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/textView24"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Xem lịch"
-                            android:textStyle="bold"
-                            android:textAlignment="center" />
+                            android:textAlignment="center"
+                            android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/textView25"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="QR"
-                            android:textStyle="bold"
-                            android:textAlignment="center" />
+                            android:textAlignment="center"
+                            android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/textView26"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Góp ý"
-                            android:textStyle="bold"
-                            android:textAlignment="center" />
+                            android:textAlignment="center"
+                            android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/textView27"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Cá Nhân"
-                            android:textStyle="bold"
-                            android:textAlignment="center" />
+                            android:textAlignment="center"
+                            android:textStyle="bold" />
                     </TableRow>
 
                 </TableLayout>
@@ -337,7 +335,7 @@
                     android:stretchColumns="*"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/imageButton3">
+                    app:layout_constraintTop_toBottomOf="@+id/textView">
 
                     <TableRow
                         android:layout_width="match_parent"

@@ -5,22 +5,20 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.os.Bundle;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.BindingAdapter;
 import androidx.databinding.DataBindingUtil;
-import androidx.databinding.ObservableArrayList;
-import androidx.databinding.ObservableBoolean;
-import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager2.widget.ViewPager2;
 
-import com.example.hucegym.adapter.ExercisesAdapter;
-import com.example.hucegym.databinding.ActivityLoginBinding;
+import com.example.hucegym.adapter.PhotoViewPagerAdapter;
 import com.example.hucegym.databinding.ActivityTrangChuBinding;
-import com.example.hucegym.model.Exercises;
-import com.example.hucegym.viewmodel.LoginViewModel;
+import com.example.hucegym.model.Photo;
 import com.example.hucegym.viewmodel.TrangChuViewModel;
 import com.example.hucegym.R;
+
+import java.util.ArrayList;
+import java.util.List;
+import me.relex.circleindicator.CircleIndicator3;
 
 public class TrangChuActivity extends AppCompatActivity {
 
@@ -29,16 +27,41 @@ public class TrangChuActivity extends AppCompatActivity {
     private ImageButton ibtnFeedBack;
     private Button btnCheckCalendar;
     private Button btnHealthMonitoring;
-    private ImageButton imgExercises;
+    private ViewPager2 mViewPager;
+    private CircleIndicator3 mCircleIndicator;
+
+    private List<Photo> mListPhoto;
+
     private ActivityTrangChuBinding activityTrangChuBinding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_trang_chu);
-        feedBack();
-        checkCalendar();
-        healthMonitoring();
         exercisesActivity();
+        loadSlide();
+//        feedBack();
+//        checkCalendar();
+//        healthMonitoring();
+    }
+
+    // Thêm ảnh vào viewPager
+    private void loadSlide(){
+        mViewPager  = findViewById(R.id.view_pager);
+        mCircleIndicator  = findViewById(R.id.circle_indicator);
+        mListPhoto = getListPhoto();
+        PhotoViewPagerAdapter photoViewPagerAdapter = new PhotoViewPagerAdapter(mListPhoto);
+        mViewPager.setAdapter(photoViewPagerAdapter);
+//        // Kết nối View Pager với Circle Indicator
+        mCircleIndicator.setViewPager(mViewPager);
+    }
+    // Lấy tạo list ảnh tạo slide
+    private List<Photo> getListPhoto(){
+        List<Photo> list = new ArrayList<>();
+        list.add(new Photo(R.drawable.img_1));
+        list.add(new Photo(R.drawable.img_2));
+        list.add(new Photo(R.drawable.img_3));
+        list.add(new Photo(R.drawable.img_4));
+        return list;
     }
 
     // Chuyển sang trang exercises

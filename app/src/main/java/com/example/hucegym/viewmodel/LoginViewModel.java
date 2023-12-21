@@ -35,6 +35,7 @@ public class LoginViewModel extends BaseObservable {
     public Context context;
 
     public LoginViewModel(Context context) {
+        getListUsers();
         this.context = context;
     }
 
@@ -77,7 +78,6 @@ public class LoginViewModel extends BaseObservable {
     public void onClickLogin() {
         // Khi click vào button đăng nhập thì mới hiện message
         isShowMessage.set(true);
-        getListUsers();
 //      Rỗng thì không làm gì cả
         if (mListUser==null || mListUser.isEmpty()){
             return;
