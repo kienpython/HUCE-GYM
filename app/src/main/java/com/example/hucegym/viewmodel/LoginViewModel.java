@@ -2,21 +2,15 @@ package com.example.hucegym.viewmodel;
 
 import android.content.Context;
 import android.content.Intent;
-import android.util.Log;
-import android.view.View;
 import android.widget.Toast;
 
 import androidx.databinding.BaseObservable;
 import androidx.databinding.Bindable;
-import androidx.databinding.Observable;
 import androidx.databinding.ObservableField;
 
 import com.example.hucegym.BR;
-import com.example.hucegym.R;
 import com.example.hucegym.connect.ApiServiceLogin;
 import com.example.hucegym.model.User;
-import com.example.hucegym.views.MainActivity;
-import com.example.hucegym.views.RegisterActivity;
 import com.example.hucegym.views.TrangChuActivity;
 
 import java.util.List;
@@ -29,14 +23,23 @@ public class LoginViewModel extends BaseObservable {
     private String username;
     private String password;
     private List<User> mListUser;
+
+    private  int idHv;
     public ObservableField<String> messageLogin = new ObservableField<>();
     public ObservableField<Boolean> isShowMessage = new ObservableField<>();
     public ObservableField<Boolean> isSuccess = new ObservableField<>();
     public Context context;
+    public int getIdHv() {
+        return idHv;
+    }
 
+    public void setIdHv(int idHv) {
+        this.idHv = idHv;
+    }
     public LoginViewModel(Context context) {
         getListUsers();
         this.context = context;
+
     }
 
     @Bindable
@@ -87,6 +90,9 @@ public class LoginViewModel extends BaseObservable {
         for (User user : mListUser){
             if (username.equals(user.getUsername()) && password.equals(user.getPassword())){
                 isHasUser = true;
+
+                idHv = user.getId_hv();
+                notifyPropertyChanged(BR._all);
                 break;
             }
         }
@@ -104,6 +110,7 @@ public class LoginViewModel extends BaseObservable {
     // Chuyển trang đến trang chủ
     private void startLoginActivity() {
         Intent intent = new Intent(context, TrangChuActivity.class);
+        intent.putExtra("id_hv", idHv);
         context.startActivity(intent);
     }
 }

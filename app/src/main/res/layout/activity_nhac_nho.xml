@@ -56,8 +56,8 @@
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayoutNhacNho"
-            app:items="@{NhacNho.listNhacNho}"/>
+            app:layout_constraintTop_toBottomOf="@+id/linearLayoutNhacNho"/>
+<!--            app:items="@{NhacNho.listNhacNho}"-->
 <!--            app:nhacNhoClickListener="@{NhacNho::onNhacNhoClick}"/>-->
 
 

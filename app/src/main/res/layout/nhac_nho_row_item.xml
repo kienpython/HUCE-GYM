@@ -7,29 +7,29 @@
             name="NhacNho"
             type="com.example.hucegym.viewmodel.NhacNhoViewModel" />
     </data>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginBottom="16dp"
-    android:background="#fff"
-    android:orientation="vertical"
-    android:padding="8dp">
 
-    <TextView
-        android:id="@+id/txt_add_at_nhac_nho"
-        android:textSize="20dp"
-        android:text="Tiêu đề"
-        android:textStyle="bold"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="#fff"
+        android:orientation="vertical"
+        android:padding="8dp">
 
-    <TextView
-        android:id="@+id/txt_notice_nhac_nho"
-        android:textSize="16dp"
-        android:text="Cố lên bây ơi"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/txt_add_at_nhac_nho"
+            android:textSize="20dp"
+            android:text="Tiêu đề"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
 
-</LinearLayout>
+        <TextView
+            android:id="@+id/txt_notice_nhac_nho"
+            android:textSize="16dp"
+            android:text="Cố lên bây ơi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
 </layout>

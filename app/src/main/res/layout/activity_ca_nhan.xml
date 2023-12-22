@@ -39,7 +39,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textViewIDHV" />
 
         <View
-            android:id="@+id/view3"
+            android:id="@+id/view31"
             android:layout_width="350dp"
             android:layout_height="1dp"
             android:layout_marginStart="25dp"
@@ -219,17 +219,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvTitle" />
 
-        <ImageView
-            android:id="@+id/imgEditIcon"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:layout_marginStart="100dp"
-            android:layout_marginTop="112dp"
-            android:src="@drawable/sua"
-            app:layout_constraintBottom_toTopOf="@+id/textViewHoTenHV"
-            app:layout_constraintStart_toStartOf="@+id/imgAvatar"
-            app:layout_constraintTop_toBottomOf="@+id/tvTitle"
-            app:layout_constraintVertical_bias="1.0" />
+<!--        <ImageView-->
+<!--            android:id="@+id/imgEditIcon"-->
+<!--            android:layout_width="32dp"-->
+<!--            android:layout_height="32dp"-->
+<!--            android:layout_marginStart="100dp"-->
+<!--            android:layout_marginTop="112dp"-->
+<!--            android:src="@drawable/sua"-->
+<!--            app:layout_constraintBottom_toTopOf="@+id/textViewHoTenHV"-->
+<!--            app:layout_constraintStart_toStartOf="@+id/imgAvatar"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/tvTitle"-->
+<!--            app:layout_constraintVertical_bias="1.0" />-->
 
         <TextView
         android:id="@+id/textViewHoTenHV"

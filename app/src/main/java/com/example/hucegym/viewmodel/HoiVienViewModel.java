@@ -47,4 +47,7 @@ public class HoiVienViewModel extends ViewModel {
     }
     private void startActivity(Intent intent) {
     }
+
+    public void loadHoiVien(String s) {
+    }
 }

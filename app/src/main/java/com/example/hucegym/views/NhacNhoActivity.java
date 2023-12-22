@@ -21,7 +21,7 @@ public class NhacNhoActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //setContentView(R.layout.activity_nhac_nho); // Loại bỏ dòng này
+        setContentView(R.layout.activity_nhac_nho); // Loại bỏ dòng này
 
         // Sử dụng DataBindingUtil để thiết lập binding
         ActivityNhacNhoBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_nhac_nho);

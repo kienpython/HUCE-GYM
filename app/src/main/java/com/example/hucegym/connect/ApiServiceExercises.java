@@ -8,6 +8,7 @@ import java.util.concurrent.TimeUnit;
 import io.reactivex.rxjava3.core.Observable;
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
+import retrofit2.Call;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava3.RxJava3CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
@@ -32,4 +33,6 @@ public interface ApiServiceExercises {
 
     @GET("api_tbl_bai_tap.php")
     Observable<List<Exercises>> callApiExercises(); // Thay đổi từ Call sang Observable
+
+    Call<List<Exercises>> getListUsers();
 }
