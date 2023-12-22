@@ -38,6 +38,8 @@ public class HoiVienViewModel extends ViewModel {
             }
         });
     }
+    // Chỉ load thông tin của một hội viên dựa trên id_hv
+
     public void logout() {
         Intent intent = new Intent("android.intent.action.MAIN");
         intent.addCategory("android.intent.category.LAUNCHER");

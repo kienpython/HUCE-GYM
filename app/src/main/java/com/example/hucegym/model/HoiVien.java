@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName;
 
 public class HoiVien {
     @SerializedName("id_hv")
-    private int id_hv;
+    private String id_hv;
 
     @SerializedName("id_lop")
     private String id_lop;
@@ -42,11 +42,11 @@ public class HoiVien {
     @SerializedName("phan_tram_mo")
     private String phan_tram_mo;
 
-    public int getId_hv() {
+    public String getId_hv() {
         return id_hv;
     }
 
-    public void setId_hv(int id_hv) {
+    public void setId_hv(String id_hv) {
         this.id_hv = id_hv;
     }
 
