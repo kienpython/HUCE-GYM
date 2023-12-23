@@ -78,13 +78,13 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txt_id_lop" />
+            app:layout_constraintTop_toBottomOf="@+id/txt_id_lop_ct" />
 
         <View
-            android:id="@+id/view3"
+            android:id="@+id/view30"
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="32dp"
             android:background="@android:color/darker_gray"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -100,7 +100,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txt_types_room" />
+            app:layout_constraintTop_toBottomOf="@+id/txt_types_room_ct" />
 
         <View
             android:id="@+id/view5"
@@ -111,7 +111,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txt_ten_lop" />
+            app:layout_constraintTop_toBottomOf="@+id/txt_ten_lop_ct" />
 
         <View
             android:id="@+id/view6"
@@ -156,7 +156,7 @@
             app:layout_constraintTop_toBottomOf="@+id/txt_time_start" />
 
         <TextView
-            android:id="@+id/txt_id_lop"
+            android:id="@+id/txt_id_lop_ct"
             android:layout_width="100dp"
             android:layout_height="30dp"
             android:layout_marginStart="150dp"
@@ -266,10 +266,10 @@
             android:layout_marginTop="5dp"
             android:text="545454"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txt_id_lop" />
+            app:layout_constraintTop_toBottomOf="@+id/txt_id_lop_ct" />
 
         <TextView
-            android:id="@+id/txt_types_room"
+            android:id="@+id/txt_types_room_ct"
             android:layout_width="100dp"
             android:layout_height="30dp"
             android:layout_marginStart="150dp"
@@ -279,14 +279,14 @@
             app:layout_constraintTop_toBottomOf="@+id/txt_id_nv" />
 
         <TextView
-            android:id="@+id/txt_ten_lop"
+            android:id="@+id/txt_ten_lop_ct"
             android:layout_width="100dp"
             android:layout_height="30dp"
             android:layout_marginStart="150dp"
             android:layout_marginTop="5dp"
             android:text="Yoga Sông Quê"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txt_types_room" />
+            app:layout_constraintTop_toBottomOf="@+id/txt_types_room_ct" />
 
         <TextView
             android:id="@+id/txt_packages"
@@ -296,7 +296,7 @@
             android:layout_marginStart="150dp"
             android:text="basic"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txt_ten_lop" />
+            app:layout_constraintTop_toBottomOf="@+id/txt_ten_lop_ct" />
 
 
         <TextView

@@ -5,13 +5,18 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.os.Bundle;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import androidx.viewpager2.widget.ViewPager2;
 
+import com.example.hucegym.adapter.HealthMonitoringAdapter;
 import com.example.hucegym.adapter.PhotoViewPagerAdapter;
+import com.example.hucegym.connect.ApiHealthMonitoring;
 import com.example.hucegym.databinding.ActivityTrangChuBinding;
+import com.example.hucegym.model.HoiVien;
 import com.example.hucegym.model.Photo;
 import com.example.hucegym.viewmodel.TrangChuViewModel;
 import com.example.hucegym.R;
@@ -19,6 +24,9 @@ import com.example.hucegym.R;
 import java.util.ArrayList;
 import java.util.List;
 import me.relex.circleindicator.CircleIndicator3;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class TrangChuActivity extends AppCompatActivity {
 
@@ -29,7 +37,9 @@ public class TrangChuActivity extends AppCompatActivity {
     private Button btnHealthMonitoring;
     private ViewPager2 mViewPager;
     private CircleIndicator3 mCircleIndicator;
-
+    private List<HoiVien> mListHoiVien;
+    private String userName;
+    private TextView tvUserName;
     private List<Photo> mListPhoto;
     private int id_hv;
 
@@ -39,12 +49,45 @@ public class TrangChuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_trang_chu);
         getIdHv();
+        handleUserName();
         exercisesActivity();
         loadSlide();
-//        feedBack();
-//        checkCalendar();
+        feedBack();
+        checkCalendar();
         healthMonitoring();
+        rules();
 
+    }
+
+    // Cài đặt tên vào chỗ chào người dùng
+    private void setUsername(String username){
+        tvUserName = findViewById(R.id.tvUserName);
+        tvUserName.setText(username);
+    }
+
+    // Lấy tên người dùng
+    private void handleUserName(){
+        ApiHealthMonitoring.apiHealthMonitoring.getListUsers().enqueue(new Callback<List<HoiVien>>() {
+            @Override
+            public void onResponse(Call<List<HoiVien>> call, Response<List<HoiVien>> response) {
+                mListHoiVien = new ArrayList<>();
+                mListHoiVien = response.body();
+                // Tìm hội viên cần tìm theo id
+                for (HoiVien hv : mListHoiVien)
+                {
+                    if(hv.getId_hv()==id_hv){
+                        userName = hv.getName_hv();
+                        setUsername(userName);
+                        break;
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<HoiVien>> call, Throwable t) {
+                Toast.makeText(TrangChuActivity.this,"onFailure", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     // Lấy id khi đăng nhập
@@ -84,15 +127,6 @@ public class TrangChuActivity extends AppCompatActivity {
 
 
 
-
-
-
-    // Chuyển trang sang phần điều khoản
-    private void startRulesActivity() {
-        Intent intent = new Intent(TrangChuActivity.this, RulesActivity.class);
-        startActivity(intent);
-    }
-
     // Chuyển sang phần góp ý
     private void startFeedBackActivity() {
         Intent intent = new Intent(TrangChuActivity.this, FeedbackActivity.class);
@@ -109,12 +143,12 @@ public class TrangChuActivity extends AppCompatActivity {
         });
     }
 
-    // Chuyển sang phần góp ý
+    // Chuyển sang phần xem lịch
     private void startCheckCalendarActivity() {
         Intent intent = new Intent(TrangChuActivity.this, CheckCalendarActivity.class);
         startActivity(intent);
     }
-    // Xử lý sự kiện nút góp ý
+    // Xử lý sự kiện nút xem lịch
     private void checkCalendar(){
         btnCheckCalendar = findViewById(R.id.btnCheckCalendar);
         btnCheckCalendar.setOnClickListener(new View.OnClickListener() {
@@ -146,4 +180,19 @@ public class TrangChuActivity extends AppCompatActivity {
         });
     }
 
+    // Chuyển sang phần điều khoản
+    private void startRulesActivity() {
+        Intent intent = new Intent(TrangChuActivity.this, RulesActivity.class);
+        startActivity(intent);
+    }
+    // Xử lý sự kiện nút điều khoản
+    private void rules(){
+        ibtnRules = findViewById(R.id.ibtnRules);
+        ibtnRules.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startRulesActivity();
+            }
+        });
+    }
 }

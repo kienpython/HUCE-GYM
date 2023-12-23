@@ -11,51 +11,60 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="40dp"
-        android:layout_marginBottom="20dp"
         android:text="Đồng ý"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button15"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioButton" />
 
     <Button
         android:id="@+id/button15"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="40dp"
-        android:layout_marginBottom="20dp"
         android:text="Hủy"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button13" />
+        app:layout_constraintStart_toEndOf="@+id/button13"
+        app:layout_constraintTop_toBottomOf="@+id/radioButton" />
 
     <RadioButton
         android:id="@+id/radioButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
-        android:layout_marginBottom="20dp"
-        android:text="Bạn đã đọc kỹ và đồng ý điều khoản?"
-        app:layout_constraintBottom_toTopOf="@+id/button13"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <EditText
-        android:id="@+id/editTextTextMultiLine"
-        android:layout_width="319dp"
-        android:layout_height="509dp"
-        android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"
-        android:breakStrategy="high_quality"
-        android:ems="10"
-        android:gravity="start|top"
-        android:inputType="textMultiLine"
-        android:text="abcdxyz"
+        android:text="Bạn đã đọc kỹ và đồng ý điều khoản?"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
-        app:layout_constraintBottom_toTopOf="@+id/radioButton"
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="0dp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:text="Điều khoản phòng GYM."
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:text="1.1. “Câu Lạc Bộ”: có nghĩa là bất kỳ hoặc toàn bộ câu lạc bộ thể dục thể hình được vận hành bởi Công Ty hoặc các bên liên quan của Công Ty mà Khách Hàng được cấp quyền ra vào và sử dụng Dịch Vụ. \n1.2. “Dịch Vụ”: có nghĩa là dịch vụ trung tâm thể dục thể hình rèn luyện sức khỏe và/hoặc dịch vụ huấn luyện viên cá nhân được cung cấp bởi Công Ty hoặc các bên có liên quan của Công Ty tại bất kỳ hoặc toàn bộ Câu Lạc Bộ.  \n1.3. “Hội Viên”: có nghĩa là cá nhân ký kết hợp đồng hội viên với Công Ty.  \n1.4. “Thẻ Hội Viên”: có nghĩa là thẻ hội viên được Công Ty cấp cho Hội Viên để Hội Viên có thể ra vào Câu Lạc Bộ và sử dụng Dịch Vụ.  \n1.5. “Trang Điện Tử”: có nghĩa là trang điện tử cali.vn thuộc quyền quản lý, vận hành và duy trì của Công Ty nhằm mục đích phục vụ cho hoạt động kinh doanh của Công Ty trong lĩnh vực rèn luyện sức khỏe, trung tâm thể dục thể hình."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

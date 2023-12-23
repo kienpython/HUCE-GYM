@@ -23,7 +23,19 @@
             android:name=".views.ExercisesActivity"
             android:exported="false" />
         <activity
+            android:name=".views.DetailNhanVienActivity"
+            android:exported="false" />
+        <activity
+            android:name=".views.LopActivity"
+            android:exported="false" />
+        <activity
+            android:name=".views.NhanVienActivity"
+            android:exported="false" />
+        <activity
             android:name=".views.HealthMonitoring"
+            android:exported="false" />
+        <activity
+            android:name=".views.DetailLopActivity"
             android:exported="false" />
         <activity
             android:name=".views.CheckCalendarActivity"
@@ -40,9 +52,9 @@
         <activity
             android:name=".views.RegisterActivity"
             android:exported="false" />
-        <activity
-            android:name=".views.HoiVienActivity"
-            android:exported="false" />
+<!--        <activity-->
+<!--            android:name=".views.HoiVienActivity"-->
+<!--            android:exported="false" />-->
         <activity
             android:name=".viewmodel.LoginViewModel"
             android:exported="false"

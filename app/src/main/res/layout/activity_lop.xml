@@ -46,7 +46,7 @@
         </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerViewLop"
+            android:id="@+id/rcvLop"
             android:layout_width="407dp"
             android:layout_height="646dp"
             android:layout_marginStart="5dp"

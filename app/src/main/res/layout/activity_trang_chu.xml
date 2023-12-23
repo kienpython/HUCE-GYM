@@ -39,12 +39,11 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/textView3"
+                    android:id="@+id/tvUserName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
                     android:layout_marginTop="20dp"
-                    android:text="User"
                     android:textStyle="bold"
                     app:layout_constraintStart_toEndOf="@+id/textView"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -165,7 +164,7 @@
                             android:src="@drawable/lop" />
 
                         <ImageButton
-                            android:id="@+id/ibtnDieuKhoan"
+                            android:id="@+id/ibtnRules"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:background="@android:color/transparent"

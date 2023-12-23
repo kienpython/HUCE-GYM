@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/layout_item_nhan_vien">
 <androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp">
+        android:padding="16dp"
+    >
 
     <ImageView
         android:id="@+id/imageAvatar"
@@ -56,38 +59,36 @@
         app:layout_constraintTop_toBottomOf="@+id/textViewTenNV" />
 
     <TextView
-        android:id="@+id/textView20"
+        android:id="@+id/tvMaNV"
         android:layout_width="180dp"
         android:layout_height="30dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="1dp"
-        android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textViewMaNV"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView33"
+        android:id="@+id/tvTenNV"
         android:layout_width="180dp"
         android:layout_height="30dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="1dp"
-        android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textViewTenNV"
-        app:layout_constraintTop_toBottomOf="@+id/textView20" />
+        app:layout_constraintTop_toBottomOf="@+id/tvMaNV" />
 
     <TextView
-        android:id="@+id/textView34"
+        android:id="@+id/tvTuoiNV"
         android:layout_width="180dp"
         android:layout_height="30dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="1dp"
-        android:text="TextView"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textViewTuoiNV"
-        app:layout_constraintTop_toBottomOf="@+id/textView33" />
+        app:layout_constraintTop_toBottomOf="@+id/tvTenNV" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
