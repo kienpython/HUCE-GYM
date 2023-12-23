@@ -82,8 +82,9 @@
             </LinearLayout>
 
             <TableLayout
+                android:id="@+id/tableLayout"
                 android:layout_width="0dp"
-                android:layout_height="629dp"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -97,7 +98,7 @@
                     <TextView
                         android:id="@+id/textView51"
                         android:textColor="#0012FF"
-                        android:layout_width="wrap_content"
+                        android:layout_width="60dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="Tháng" />
@@ -105,7 +106,7 @@
                     <TextView
                         android:id="@+id/textView48"
                         android:textColor="#0012FF"
-                        android:layout_width="wrap_content"
+                        android:layout_width="30dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="Chiều cao" />
@@ -113,7 +114,7 @@
                     <TextView
                         android:id="@+id/textView49"
                         android:textColor="#0012FF"
-                        android:layout_width="wrap_content"
+                        android:layout_width="30dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="Cân nặng" />
@@ -121,45 +122,25 @@
                     <TextView
                         android:id="@+id/textView50"
                         android:textColor="#0012FF"
-                        android:layout_width="wrap_content"
+                        android:layout_width="30dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="Phần trăm mỡ" />
                 </TableRow>
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
 
-                    <TextView
-                        android:id="@+id/textView52"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Tháng 1" />
-
-                    <TextView
-                        android:id="@+id/textView53"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="170 cm" />
-
-                    <TextView
-                        android:id="@+id/textView54"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="60 kg" />
-
-                    <TextView
-                        android:id="@+id/textView55"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="50 %" />
-                </TableRow>
             </TableLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcv_HealthMonitoring"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tableLayout" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 

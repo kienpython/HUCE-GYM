@@ -31,17 +31,28 @@ public class TrangChuActivity extends AppCompatActivity {
     private CircleIndicator3 mCircleIndicator;
 
     private List<Photo> mListPhoto;
+    private int id_hv;
 
     private ActivityTrangChuBinding activityTrangChuBinding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_trang_chu);
+        getIdHv();
         exercisesActivity();
         loadSlide();
 //        feedBack();
 //        checkCalendar();
-//        healthMonitoring();
+        healthMonitoring();
+
+    }
+
+    // Lấy id khi đăng nhập
+    private void getIdHv(){
+        Bundle bundle = getIntent().getExtras();
+        if(bundle != null){
+            id_hv = (int) bundle.get("id_hv");
+        }
     }
 
     // Thêm ảnh vào viewPager
@@ -118,6 +129,9 @@ public class TrangChuActivity extends AppCompatActivity {
     // Chuyển sang phần theo dõi sức khỏe
     private void startHealthMonitoringActivity() {
         Intent intent = new Intent(TrangChuActivity.this, HealthMonitoring.class);
+        Bundle bundle = new Bundle();
+        bundle.putInt("id_hv",id_hv);
+        intent.putExtras(bundle);
         startActivity(intent);
     }
     // Xử lý sự kiện nút theo dõi sức khỏe

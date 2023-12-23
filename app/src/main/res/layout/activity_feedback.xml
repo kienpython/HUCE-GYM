@@ -49,13 +49,13 @@
                 app:layout_constraintTop_toBottomOf="@+id/imageButton" />
 
             <Button
-                android:id="@+id/button19"
+                android:id="@+id/btnGopY"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="40dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="40dp"
-                android:text="Button"
+                android:text="Gửi góp ý"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tableLayout3" />
@@ -70,7 +70,7 @@
                 android:stretchColumns="*"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/button19">
+                app:layout_constraintTop_toBottomOf="@+id/btnGopY">
 
                 <TableRow
                     android:layout_width="match_parent"
@@ -187,14 +187,14 @@
                     android:layout_height="match_parent">
 
                     <EditText
-                        android:id="@+id/editText1"
+                        android:id="@+id/edtTenCoSo"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_span="2"
                         android:layout_weight="2"
                         android:ems="10"
                         android:inputType="text"
-                        android:text="Name" />
+                         />
                 </TableRow>
 
                 <TableRow
@@ -225,14 +225,14 @@
                     android:layout_height="match_parent">
 
                     <EditText
-                        android:id="@+id/editText4"
+                        android:id="@+id/editTenHoiVien"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_span="2"
                         android:layout_weight="2"
                         android:ems="10"
                         android:inputType="text"
-                        android:text="Name" />
+                         />
                 </TableRow>
 
                 <TableRow
@@ -263,14 +263,14 @@
                     android:layout_height="match_parent">
 
                     <EditText
-                        android:id="@+id/editText11"
+                        android:id="@+id/edtSoDienThoai"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_span="2"
                         android:layout_weight="2"
                         android:ems="10"
                         android:inputType="text"
-                        android:text="Name" />
+                         />
                 </TableRow>
 
                 <TableRow
@@ -302,14 +302,14 @@
                     android:layout_height="match_parent">
 
                     <EditText
-                        android:id="@+id/editTextText"
+                        android:id="@+id/edtGmail"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_span="2"
                         android:layout_weight="2"
                         android:ems="10"
                         android:inputType="text"
-                        android:text="Name" />
+                         />
                 </TableRow>
 
                 <TableRow
@@ -340,14 +340,14 @@
                     android:layout_height="match_parent" >
 
                     <EditText
-                        android:id="@+id/editText777"
+                        android:id="@+id/edtNoiDung"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_span="2"
                         android:layout_weight="2"
                         android:ems="10"
                         android:inputType="text"
-                        tools:text="Nhập nội dung" />
+                        />
                 </TableRow>
             </TableLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>

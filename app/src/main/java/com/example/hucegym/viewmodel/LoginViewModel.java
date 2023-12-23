@@ -2,6 +2,7 @@ package com.example.hucegym.viewmodel;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
@@ -28,6 +29,7 @@ import retrofit2.Response;
 public class LoginViewModel extends BaseObservable {
     private String username;
     private String password;
+    private int id_hv;
     private List<User> mListUser;
     public ObservableField<String> messageLogin = new ObservableField<>();
     public ObservableField<Boolean> isShowMessage = new ObservableField<>();
@@ -76,6 +78,7 @@ public class LoginViewModel extends BaseObservable {
 
     // Xử lý sự kiện đăng nhập
     public void onClickLogin() {
+
         // Khi click vào button đăng nhập thì mới hiện message
         isShowMessage.set(true);
 //      Rỗng thì không làm gì cả
@@ -86,13 +89,14 @@ public class LoginViewModel extends BaseObservable {
         boolean isHasUser = false;
         for (User user : mListUser){
             if (username.equals(user.getUsername()) && password.equals(user.getPassword())){
+                id_hv = user.getId_hv();
                 isHasUser = true;
                 break;
             }
         }
 
         if (isHasUser){
-            startLoginActivity();
+            startLoginActivity(id_hv);
             isSuccess.set(true);
         }
         else{
@@ -102,8 +106,11 @@ public class LoginViewModel extends BaseObservable {
     }
 
     // Chuyển trang đến trang chủ
-    private void startLoginActivity() {
+    private void startLoginActivity(int id_hv) {
         Intent intent = new Intent(context, TrangChuActivity.class);
+        Bundle bundle = new Bundle();
+        bundle.putInt("id_hv",id_hv);
+        intent.putExtras(bundle);
         context.startActivity(intent);
     }
 }
