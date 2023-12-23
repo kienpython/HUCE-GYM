@@ -65,10 +65,5 @@ public class MainActivity extends AppCompatActivity {
 //        finish();
     }
 
-    private void loginUser(String id_hv) {
-        Intent intent = new Intent(this, HoiVienActivity.class);
-        intent.putExtra("id_hv", id_hv);
-        startActivity(intent);
-    }
 
 }
