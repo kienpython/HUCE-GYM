@@ -14,7 +14,7 @@ public class TrangChuViewModel extends BaseObservable {
         this.context = context;
     }
 
-    // Chuyển sang phần xem bài tập
+     //Chuyển sang phần xem bài tập
     private void startExercisesActivity() {
         Intent intent = new Intent(context, ExercisesActivity.class);
         context.startActivity(intent);

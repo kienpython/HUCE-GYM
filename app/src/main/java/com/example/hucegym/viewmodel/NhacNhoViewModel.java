@@ -1,29 +1,52 @@
 package com.example.hucegym.viewmodel;
 
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
+import com.example.hucegym.connect.ApiServiceNhacNho;
 import com.example.hucegym.model.NhacNho;
 
-import java.util.ArrayList;
 import java.util.List;
 
-public class NhacNhoViewModel extends ViewModel {
-    // Có thể chứa danh sách các nhắc nhở
-    // Hoặc gọi API để lấy danh sách từ server
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
-    // Ví dụ danh sách không mềm
-    private List<NhacNho> danhSachNhacNho = new ArrayList<>();
+public class NhacNhoViewModel extends ViewModel {
+    private MutableLiveData<List<NhacNho>> listNhacNho = new MutableLiveData<>();
+    private ApiServiceNhacNho apiServiceNhacNho;
 
     public NhacNhoViewModel() {
-        // Khởi tạo dữ liệu mẫu
-        danhSachNhacNho.add(new NhacNho("Nhắc nhở 1", "Nội dung nhắc nhở 1"));
-        danhSachNhacNho.add(new NhacNho("Nhắc nhở 2", "Nội dung nhắc nhở 2"));
-        // Thêm các mục khác nếu cần
+        apiServiceNhacNho = new ApiServiceNhacNho() {
+            @Override
+            public Call<List<NhacNho>> getListNhacNho() {
+                return null;
+            }
+        };
+        loadNhacNhoList();
     }
 
-    public List<NhacNho> getDanhSachNhacNho() {
-        return danhSachNhacNho;
+    public LiveData<List<NhacNho>> getListNhacNho() {
+        return listNhacNho;
+    }
+
+    private void loadNhacNhoList() {
+        apiServiceNhacNho.getListNhacNho().enqueue(new Callback<List<NhacNho>>() {
+            @Override
+            public void onResponse(Call<List<NhacNho>> call, Response<List<NhacNho>> response) {
+                if (response.isSuccessful()) {
+                    listNhacNho.setValue(response.body());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<NhacNho>> call, Throwable t) {
+                // Xử lý lỗi nếu có
+            }
+        });
     }
 }
+
 
 

@@ -3,13 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#f2f2f2"
         android:padding="10dp">
+
         <LinearLayout
-            android:id="@+id/linearLayoutPT"
+            android:id="@+id/linearLayoutSuKien"
             android:layout_width="0dp"
             android:layout_height="60dp"
             android:background="@drawable/draw"
@@ -20,7 +22,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <ImageButton
-                android:id="@+id/ibtnBackPT"
+                android:id="@+id/ibtnBackSuKien"
                 android:paddingLeft="10dp"
                 android:layout_width="wrap_content"
                 android:background="@android:color/transparent"
@@ -28,28 +30,28 @@
                 android:src="@drawable/back" />
 
             <TextView
-                android:id="@+id/textView216"
+                android:id="@+id/textView296"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
                 android:layout_marginLeft="10dp"
                 android:textSize="20dp"
                 android:paddingLeft="10dp"
-                android:text="Personal Trainer" />
+                android:text="Sự kiện" />
         </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerViewPT"
-            android:layout_width="370dp"
-            android:layout_height="615dp"
+            android:id="@+id/recyclerViewSuKien"
+            android:layout_width="379dp"
+            android:layout_height="628dp"
             android:layout_marginStart="5dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="5dp"
+            android:padding="10dp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.454"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayoutPT" />
+            app:layout_constraintTop_toBottomOf="@+id/linearLayoutSuKien" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

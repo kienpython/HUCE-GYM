@@ -46,18 +46,19 @@
         </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerView"
-            android:layout_width="399dp"
-            android:layout_height="613dp"
+            android:id="@+id/recyclerViewNhacNho"
+            android:layout_width="387dp"
+            android:layout_height="612dp"
             android:layout_marginStart="5dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="5dp"
+            android:padding="10dp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayoutNhacNho" />
-        <!--            app:items="@{NhacNho.listNhacNho}"-->
-<!--            app:nhacNhoClickListener="@{NhacNho::onNhacNhoClick}"/> -->
+            app:layout_constraintTop_toBottomOf="@+id/linearLayoutNhacNho"/>
+<!--            app:items="@{NhacNho.listNhacNho}"-->
+<!--            app:nhacNhoClickListener="@{NhacNho::onNhacNhoClick}"/>-->
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

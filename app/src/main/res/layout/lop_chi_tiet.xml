@@ -125,17 +125,6 @@
             app:layout_constraintTop_toBottomOf="@+id/txt_packages" />
 
         <View
-            android:id="@+id/view7"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="30dp"
-            android:background="@android:color/darker_gray"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txt_thoi_luong" />
-
-        <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_marginTop="30dp"
@@ -220,16 +209,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txt_ten_lop2" />
 
-        <TextView
-            android:id="@+id/txt_thoi_luong2"
-            android:layout_marginTop="5dp"
-            android:layout_width="100dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="10dp"
-            android:text="Thời lượng:"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txt_packages2" />
 
         <TextView
             android:id="@+id/txt_ngay_hoat_dong2"
@@ -240,7 +219,7 @@
             android:text="Lịch học:"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txt_thoi_luong2" />
+            app:layout_constraintTop_toBottomOf="@+id/txt_packages2" />
 
         <TextView
             android:id="@+id/txt_so_luong_hv2"
@@ -319,15 +298,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txt_ten_lop" />
 
-        <TextView
-            android:id="@+id/txt_thoi_luong"
-            android:layout_width="100dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="150dp"
-            android:layout_marginTop="5dp"
-            android:text="2 tháng"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txt_packages" />
 
         <TextView
             android:id="@+id/txt_ngay_hoat_dong"
@@ -337,7 +307,7 @@
             android:layout_marginStart="150dp"
             android:text="T2, T3, T4"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txt_thoi_luong" />
+            app:layout_constraintTop_toBottomOf="@+id/txt_packages" />
 
         <TextView
             android:id="@+id/txt_so_luong_hv"

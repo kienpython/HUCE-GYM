@@ -1,25 +1,55 @@
 package com.example.hucegym.viewmodel;
 
+import android.content.Intent;
+
+import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
+import com.example.hucegym.connect.ApiServiceCaNhan;
 import com.example.hucegym.model.HoiVien;
 
-public class HoiVienViewModel extends ViewModel {
-    private MutableLiveData<HoiVien> hoiVienData;
+import java.util.List;
 
-    public MutableLiveData<HoiVien> getHoiVienData() {
-        if (hoiVienData == null) {
-            hoiVienData = new MutableLiveData<>();
-            loadHoiVienData();
-        }
-        return hoiVienData;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
+public class HoiVienViewModel extends ViewModel {
+
+    private MutableLiveData<List<HoiVien>> hoiVienList = new MutableLiveData<>();
+
+    public LiveData<List<HoiVien>> getHoiVienList() {
+        return hoiVienList;
     }
 
-    private void loadHoiVienData() {
-        // Gọi Retrofit hoặc API để lấy dữ liệu hội viên từ server
-        // Sau khi nhận được dữ liệu, cập nhật giá trị của hoiVienData
-        // HoiVien hoiVien = ...;
-        // hoiVienData.setValue(hoiVien);
+    public void loadHoiVienList() {
+        ApiServiceCaNhan.apiServiceCaNhan.getListHoiVien().enqueue(new Callback<List<HoiVien>>() {
+            @Override
+            public void onResponse(Call<List<HoiVien>> call, Response<List<HoiVien>> response) {
+                if (response.isSuccessful()) {
+                    hoiVienList.setValue(response.body());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<HoiVien>> call, Throwable t) {
+                // Xử lý lỗi nếu có
+            }
+        });
+    }
+    // Chỉ load thông tin của một hội viên dựa trên id_hv
+
+    public void logout() {
+        Intent intent = new Intent("android.intent.action.MAIN");
+        intent.addCategory("android.intent.category.LAUNCHER");
+        startActivity(intent);
+    }
+    private void finish() {
+    }
+    private void startActivity(Intent intent) {
+    }
+
+    public void loadHoiVien(String s) {
     }
 }

@@ -1,8 +1,5 @@
 package com.example.hucegym.views;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Html;
@@ -10,6 +7,9 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 
 import com.example.hucegym.R;
 import com.example.hucegym.databinding.ActivityLoginBinding;
@@ -63,6 +63,12 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this, RegisterActivity.class);
         startActivity(intent);
 //        finish();
+    }
+
+    private void loginUser(String id_hv) {
+        Intent intent = new Intent(this, HoiVienActivity.class);
+        intent.putExtra("id_hv", id_hv);
+        startActivity(intent);
     }
 
 }
